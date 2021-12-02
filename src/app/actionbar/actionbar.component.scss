@@ -1,0 +1,57 @@
+.action-container {
+
+    flex-direction: row;
+    padding: 10px;
+
+    .social-svg {
+        
+        padding : 0px;
+        margin: 0px;
+        width: 40px;
+        height: 40px;
+    
+    }
+    .svg {
+
+        width: 100%;
+        padding: 5px;
+    }
+
+    .social-svg :hover {
+        background-color: cornsilk;
+        border: solid 1px brown;        
+    }
+}
+
+.actionbar--center {
+
+    justify-content: center;
+}
+
+.actionbar--right {
+
+    justify-content: right;
+}
+
+.actionbar--left {
+
+   justify-content: start;
+}
+
+.actionbar--rounded {
+
+    .svg {
+
+        border-radius: 50%;
+
+    }
+}
+
+.actionbar--flat {
+
+    .svg {
+
+        border-radius: none;
+
+    }
+}

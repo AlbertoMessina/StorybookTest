@@ -1,0 +1,16 @@
+<div class="row card {{type}}" >
+
+    <div class="col-md-12 card-header">
+        {{title}}
+    </div>
+   
+    
+    <div class="col-md-12 card-body">
+        <img class="card-img"  src="{{imageSrc}}" alt={{altImageSrc}}>
+    </div>
+        
+    <div *ngIf='type != "small-card"' class="col-md-12 card-footer">
+        <actionbar position='{{position}}' [rounded] = 'rounded' ></actionbar>
+    </div>
+
+</div>

@@ -1,0 +1,43 @@
+
+.card-header {
+    font-size: large;
+    font-weight: bold;
+}
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-img {
+    margin:auto;
+    text-align: center;
+    width: 90%;
+    height: 80%;
+}
+
+
+.large-card {
+    width: 500px;
+    height: 500px;
+}
+
+.small-card {
+    width: 220px;
+    height: 250px;
+
+    .card-header {
+
+        font-size: medium;
+    }
+
+    .card-img {
+
+        width: 95%;
+        
+    }
+}
+
+.medium-card {
+    width: 350px;
+    height: 400px;
+}
