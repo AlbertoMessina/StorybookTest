@@ -1,15 +1,18 @@
 .action-container {
-
+    display: flex;
     flex-direction: row;
     padding: 10px;
 
-    .social-svg {
-        
+    .link-container {
+
+        display: flex;
+
+    }
+    .social-svg {    
         padding : 0px;
         margin: 0px;
         width: 40px;
         height: 40px;
-    
     }
     .svg {
 
@@ -24,34 +27,27 @@
 }
 
 .actionbar--center {
-
     justify-content: center;
 }
 
 .actionbar--right {
-
     justify-content: right;
 }
 
 .actionbar--left {
-
    justify-content: start;
 }
 
 .actionbar--rounded {
 
     .svg {
-
         border-radius: 50%;
-
     }
 }
 
 .actionbar--flat {
 
     .svg {
-
         border-radius: none;
-
     }
 }

@@ -1,18 +1,25 @@
-export interface StorybookCard extends Actionbar{
+export interface StorybookCard {
 
+    actionbar?: Actionbar;
+    card : Card;
+}
+
+export interface Actionbar {
+    position : AlignType;
+    rounded : Boolean;
+    type :  contextType;
+}
+
+export interface Card {
     id: string;
     title: string;
-    type: string;
+    type: cardType;
     imageSrc?: string;
     altImageSrc?: string;
 }
 
-export interface Actionbar {
+export declare type AlignType = 'left' | 'center' | 'right';
 
-    position : 'left' | 'right' | 'center';
-    
-    rounded : Boolean;
-    
-    backgroundColor: string;
-       
-}
+export declare type cardType = 'small-card' | 'large-card' | 'medium-card';
+
+export declare type contextType = 'social' | 'cart';

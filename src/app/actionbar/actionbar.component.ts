@@ -1,4 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+
+import { Actionbar } from '../models/models';
+import { AlignType } from '../models/models';
 
 @Component({
   selector: 'actionbar',
@@ -8,27 +11,22 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ActionbarComponent implements OnInit {
 
   //STORYBOOK CONFIG
+  @Input() actionbar: Actionbar;    
 
-  @Input() actionbar : any;
-  //Background color
-  @Input() 
-  backgroundColor: string;
-
-  //position of button
-  @Input() 
-  position: 'left' | 'right' | 'center';
-
-  //rounded
-  @Input() rounded = false;
-
+  @Output() 
+  onClickAction = new EventEmitter<Event>();
+  
   ngOnInit(): void {
     
   }
+  
+  onClick(social : any){
+    console.log(social);
+    this.onClickAction.emit(social);
+  }
 
   public get classes(): string[] {
-    
-    const mode = this.rounded ? 'actionbar--rounded' : 'actionbar--flat';
-
-    return [ `actionbar--${this.position}`, mode];
+    const mode = this.actionbar?.rounded ? 'actionbar--rounded' : 'actionbar--flat';
+    return [ `actionbar--${this.actionbar?.position}`, mode];
   }
 }
