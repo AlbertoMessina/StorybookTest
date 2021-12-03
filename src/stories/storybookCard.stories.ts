@@ -65,14 +65,13 @@ NoImageCard.args = {
     title: 'No image card',
     altImageSrc: 'Monday crying frog',
     imageSrc: ''
-
   }
 
 };
 
 export const LargeImageCard = Template.bind({});
 LargeImageCard.args = {
-  actionbar:{
+  actionbar: {
     ...BaseCard.args.actionbar,
   },
   card: {
@@ -90,10 +89,9 @@ cardWithRightAction.args = {
     ...ActionbarStories.rightFlat.args.actionbar,
   },
   card: {
-  ...BaseCard.args.card,
-  title: 'Wow Right Action and flat button in a sigle Cards',
-  imageSrc: '../../assets/mercoledi.jpg',
-  altImageSrc: 'TACOS CATS',
-
+    ...BaseCard.args.card,
+    title: 'Wow Right Action and flat button in a sigle Cards',
+    imageSrc: '../../assets/mercoledi.jpg',
+    altImageSrc: 'TACOS CATS',
   }
 }

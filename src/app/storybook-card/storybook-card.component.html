@@ -3,9 +3,9 @@
         {{card.title}}
     </div>
     <div class="col-md-12 card-body">
-        <img class="card-img"  (click)='openCard(card.id)' src="{{card.imageSrc}}" alt={{card.altImageSrc}}>
+        <img class="card-img" (click)='openCard(card.id)' src="{{card.imageSrc}}" alt={{card.altImageSrc}}>
     </div>
-        
+
     <div *ngIf='card.type != "small-card"' class="col-md-12 card-footer">
         <actionbar [actionbar]='actionbar' (onClickAction)="onClickAction.emit($event)"></actionbar>
     </div>
