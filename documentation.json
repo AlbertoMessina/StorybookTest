@@ -397,7 +397,7 @@
         },
         {
             "name": "StorybookCardComponent",
-            "id": "component-StorybookCardComponent-088038077f520f4f71724de4f1c24dc9",
+            "id": "component-StorybookCardComponent-16182d3f8c06a1bbc29c1890cfc923e6",
             "file": "src/app/storybook-card/storybook-card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -437,6 +437,14 @@
                     "deprecationMessage": "",
                     "line": 17,
                     "type": "EventEmitter"
+                },
+                {
+                    "name": "openCardClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 20,
+                    "type": "EventEmitter"
                 }
             ],
             "propertiesClass": [],
@@ -447,19 +455,37 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 21,
+                    "line": 24,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
                 {
                     "name": "openCard",
-                    "args": [],
+                    "args": [
+                        {
+                            "name": "id",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 24,
+                    "line": 27,
                     "deprecated": false,
-                    "deprecationMessage": ""
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "id",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
                 }
             ],
             "deprecated": false,
@@ -469,11 +495,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\n\nimport { Actionbar, StorybookCard } from '../models/models'\n@Component({\n  selector: 'app-storybook-card',\n  templateUrl: './storybook-card.component.html',\n  styleUrls: ['./storybook-card.component.scss']\n})\nexport class StorybookCardComponent implements OnInit {\n\n  //child input\n @Input() actionbar: Actionbar;\n\n @Input() card: StorybookCard;\n\n @Output() \n onClickAction = new EventEmitter<Event>(); \n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  openCard() {\n    console.log('Open the card');\n  }\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\n\nimport { Actionbar, StorybookCard } from '../models/models'\n@Component({\n  selector: 'app-storybook-card',\n  templateUrl: './storybook-card.component.html',\n  styleUrls: ['./storybook-card.component.scss']\n})\nexport class StorybookCardComponent implements OnInit {\n\n  //child input\n  @Input() actionbar: Actionbar;\n\n  @Input() card: StorybookCard;\n\n  @Output()\n  onClickAction = new EventEmitter<Event>();\n\n  @Output()\n  openCardClick = new EventEmitter<Event>();\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  openCard(id : any) {\n    console.log('Hello there... General Kenoby');\n    this.openCardClick.emit(<any>'Hello there... General Kenoby' + id);\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "\n.card-header {\n    font-size: large;\n    font-weight: bold;\n}\n.card-body {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.card-img {\n    margin:auto;\n    text-align: center;\n    width: 90%;\n    height: 80%;\n}\n\n\n.large-card {\n    width: 500px;\n    height: 500px;\n}\n\n.small-card {\n    width: 220px;\n    height: 250px;\n\n    .card-header {\n        white-space: nowrap;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        font-size: medium;\n    }\n\n    .card-img {\n\n        width: 95%;\n        \n    }\n}\n\n.medium-card {\n    width: 350px;\n    height: 400px;\n}\n\n.card-img :hover{\n\n    box-shadow: 1px 1px ;\n\n}\n",
+                    "data": "\n.card-header {\n    font-size: large;\n    font-weight: bold;\n}\n.card-body {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding-left: 0px;\n    padding-right: 0px;\n}\n.card {\n     box-shadow:3px 6px #88888887;      \n}\n\n.card-img {\n    margin:auto;\n    text-align: center;\n    width: 100%;\n    height: 90%;\n}\n\n.large-card {\n    width: 500px;\n    height: 500px;\n}\n\n.small-card {\n    width: 220px;\n    height: 250px;\n\n    .card-header {\n        white-space: nowrap;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        font-size: medium;\n    }\n\n    .card-img {\n\n        width: 95%;\n        \n    }\n}\n\n.medium-card {\n    width: 350px;\n    height: 400px;\n}\n",
                     "styleUrl": "./storybook-card.component.scss"
                 }
             ],
@@ -484,12 +510,12 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 17
+                "line": 20
             },
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"row card {{card.type}}\" >\n    <div class=\"col-md-12 card-header\">\n        {{card.title}}\n    </div>\n    <div class=\"col-md-12 card-body\">\n        <img class=\"card-img\"  src=\"{{card.imageSrc}}\" alt={{card.altImageSrc}}>\n    </div>\n        \n    <div *ngIf='card.type != \"small-card\"' class=\"col-md-12 card-footer\">\n        <actionbar [actionbar]='actionbar' (onClickAction)=\"onClickAction.emit($event)\"></actionbar>\n    </div>\n</div>\n"
+            "templateData": "<div class=\"row card {{card.type}}\">\n    <div class=\"col-md-12 card-header\">\n        {{card.title}}\n    </div>\n    <div class=\"col-md-12 card-body\">\n        <img class=\"card-img\"  (click)='openCard(card.id)' src=\"{{card.imageSrc}}\" alt={{card.altImageSrc}}>\n    </div>\n        \n    <div *ngIf='card.type != \"small-card\"' class=\"col-md-12 card-footer\">\n        <actionbar [actionbar]='actionbar' (onClickAction)=\"onClickAction.emit($event)\"></actionbar>\n    </div>\n</div>\n"
         },
         {
             "name": "TaskComponent",
@@ -1104,7 +1130,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<StorybookCard>",
-                "defaultValue": "(args: StorybookCard) => ({\n  props: {\n    ...args\n  }\n})"
+                "defaultValue": "(args: StorybookCard) => ({\n  props: {\n    ...args,\n    onClickAction: ActionbarStories.actionsData.onClickAction,\n    openCardClick: action('openCardClick'),\n  }\n})"
             },
             {
                 "name": "Template",
@@ -1328,7 +1354,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<StorybookCard>",
-                    "defaultValue": "(args: StorybookCard) => ({\n  props: {\n    ...args\n  }\n})"
+                    "defaultValue": "(args: StorybookCard) => ({\n  props: {\n    ...args,\n    onClickAction: ActionbarStories.actionsData.onClickAction,\n    openCardClick: action('openCardClick'),\n  }\n})"
                 }
             ],
             "src/test.ts": [
@@ -1556,7 +1582,7 @@
                 "linktype": "component",
                 "name": "StorybookCardComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/7",
+                "coverageCount": "0/8",
                 "status": "low"
             },
             {
