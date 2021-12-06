@@ -231,7 +231,7 @@
     "injectables": [
         {
             "name": "CardService",
-            "id": "injectable-CardService-1dff61a6590d0b755cf3f7bbe640d507",
+            "id": "injectable-CardService-3ffdb592dec4598e94f20a6256247039",
             "file": "src/app/service/card.service.ts",
             "properties": [],
             "methods": [
@@ -241,7 +241,7 @@
                     "optional": false,
                     "returnType": "Observable<any>",
                     "typeParameters": [],
-                    "line": 28,
+                    "line": 27,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -251,7 +251,7 @@
                     "optional": false,
                     "returnType": "Observable<any>",
                     "typeParameters": [],
-                    "line": 22,
+                    "line": 21,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -270,7 +270,7 @@
             "deprecationMessage": "",
             "description": "",
             "rawdescription": "\n",
-            "sourceCode": "import { Injectable } from '@angular/core';\nimport { Observable, of } from 'rxjs';\nimport { SmallStorybookCard, MediumStorybookCard, LargeStorybookCard } from '../../assets/data/card-mock'\n\nimport { StorybookCard } from '../models/models';\n\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class CardService {\n\n  constructor() { }\n\n  getSmallCard(): Observable<any> {\n    const card = SmallStorybookCard;\n    const cards = of(card);\n    return cards;\n  }\n\n\n  getMediumCard(): Observable<any> {\n    const card = MediumStorybookCard;\n    const cards = of(card);\n    return cards;\n  }\n\n  getLargeCard(): Observable<any> {\n    const card = LargeStorybookCard;\n    const cards = of(card);\n    return cards;\n  }\n\n}\n\n",
+            "sourceCode": "import { Injectable } from '@angular/core';\nimport { Observable, of } from 'rxjs';\nimport { SmallStorybookCard, MediumStorybookCard, LargeStorybookCard } from '../../assets/data/card-mock'\n\nimport { StorybookCard } from '../models/models';\n\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class CardService {\n\n  constructor() { }\n\n  getSmallCard(): Observable<any> {\n    const card = SmallStorybookCard;\n    const cards = of(card);\n    return cards;\n  }\n\n  getMediumCard(): Observable<any> {\n    const card = MediumStorybookCard;\n    const cards = of(card);\n    return cards;\n  }\n\n  getLargeCard(): Observable<any> {\n    const card = LargeStorybookCard;\n    const cards = of(card);\n    return cards;\n  }\n}\n",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
@@ -450,7 +450,7 @@
         },
         {
             "name": "CardPageComponent",
-            "id": "component-CardPageComponent-08100c74eed1f79bba6fd2d1ab773160",
+            "id": "component-CardPageComponent-59dbcaa922e033f3073a78f32fafdfde",
             "file": "src/app/card-page/card-page.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -469,42 +469,22 @@
             "inputsClass": [
                 {
                     "name": "state",
+                    "defaultValue": "'medium'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 14,
                     "type": "string"
-                }
-            ],
-            "outputsClass": [],
-            "propertiesClass": [
+                },
                 {
                     "name": "storybookcards",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "any",
-                    "optional": false,
-                    "description": "",
-                    "line": 15
-                },
-                {
-                    "name": "storybookcardsLarge",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "any",
-                    "optional": false,
-                    "description": "",
-                    "line": 19
-                },
-                {
-                    "name": "storybookcardsMedium",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "any",
-                    "optional": false,
-                    "description": "",
-                    "line": 17
+                    "line": 17,
+                    "type": "any"
                 }
             ],
+            "outputsClass": [],
+            "propertiesClass": [],
             "methodsClass": [
                 {
                     "name": "getLargeCard",
@@ -512,7 +492,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 44,
+                    "line": 43,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -522,7 +502,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 38,
+                    "line": 37,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -532,7 +512,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 32,
+                    "line": 31,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -554,11 +534,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { CardService } from '../service/card.service';\nimport { StorybookCardComponent } from '../storybook-card/storybook-card.component';\nimport { ActionbarComponent } from '../actionbar/actionbar.component';\n\n@Component({\n  selector: 'app-card-page',\n  templateUrl: './card-page.component.html',\n  styleUrls: ['./card-page.component.scss']\n})\nexport class CardPageComponent implements OnInit {\n\n  @Input() state: string;\n  storybookcards: any;\n\n  storybookcardsMedium: any;\n\n  storybookcardsLarge: any;\n  constructor(\n    private cardService: CardService\n  ) { }\n\n  ngOnInit(): void {\n    this.getSmallCard();\n    this.getLargeCard();\n    this.getMediumCard();\n\n    console.log(this.storybookcards);\n  }\n\n  getSmallCard() {\n    const card = this.cardService.getSmallCard().subscribe(\n      data => this.storybookcards = data\n    );\n  }\n\n  getMediumCard() {\n    const card = this.cardService.getMediumCard().subscribe(\n      data => this.storybookcardsMedium = data\n    );\n  }\n\n  getLargeCard() {\n    const card = this.cardService.getLargeCard().subscribe(\n      data => this.storybookcardsLarge = data\n    );\n  }\n}\n",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { CardService } from '../service/card.service';\nimport { StorybookCardComponent } from '../storybook-card/storybook-card.component';\nimport { ActionbarComponent } from '../actionbar/actionbar.component';\n\n@Component({\n  selector: 'app-card-page',\n  templateUrl: './card-page.component.html',\n  styleUrls: ['./card-page.component.scss']\n})\nexport class CardPageComponent implements OnInit {\n\n  @Input() state: string = 'medium';\n\n  @Input()\n  storybookcards: any;\n\n\n  constructor(\n    private cardService: CardService\n  ) { }\n\n  ngOnInit(): void {\n    this.getSmallCard();\n    this.getLargeCard();\n    this.getMediumCard();\n    console.log(this.storybookcards);\n  }\n\n  getSmallCard() {\n    const card = this.cardService.getSmallCard().subscribe(\n      data => this.storybookcards = data\n    );\n  }\n\n  getMediumCard() {\n    const card = this.cardService.getMediumCard().subscribe(\n      data => this.storybookcards = data\n    );\n  }\n\n  getLargeCard() {\n    const card = this.cardService.getLargeCard().subscribe(\n      data => this.storybookcards = data\n    );\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".card-page-container {\n   display: flex;\n   justify-content: center;\n   flex-direction: row;\n   flex-wrap: wrap;\n   \n   app-storybook-card {\n       margin:30px;\n   }\n}  \n.large{\n    display: flex;\n    justify-content: center;\n    flex-direction: row;\n \n\n        app-storybook-card {\n            margin:20px;\n        }\n        \n}",
+                    "data": ".card-page-container {\n   display: flex;\n   justify-content: center;\n   flex-direction: row;\n   flex-wrap: wrap;\n   \n   app-storybook-card {\n       margin:30px;\n   }\n}  \n.large{\n    display: flex;\n    justify-content: center;\n    flex-direction: row;\n \n\n        app-storybook-card {\n            margin:20px;\n        }       \n}\n",
                     "styleUrl": "./card-page.component.scss"
                 }
             ],
@@ -576,7 +556,7 @@
                         "deprecationMessage": ""
                     }
                 ],
-                "line": 19,
+                "line": 17,
                 "jsdoctags": [
                     {
                         "name": "cardService",
@@ -592,7 +572,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div *ngIf=\"state === 'small'\">\n    <H2>Small Card Container</H2>\n    <div class=\"my-5 card-page-container\">\n        <app-storybook-card *ngFor=\"let storybookcard of storybookcards\" [storybookcard]=\"storybookcard\">\n        </app-storybook-card>\n    </div>\n</div>\n<div *ngIf=\"state ==='medium'\">\n    <H2>Medium Card Container</H2>\n    <div class=\"my-5 card-page-container\">\n        <app-storybook-card *ngFor=\"let storybookcard of storybookcardsMedium\" [storybookcard]=\"storybookcard\">\n        </app-storybook-card>\n    </div>\n</div>\n<div *ngIf=\"state ==='large'\">\n    <H2>Large Card Container</H2>\n    <div class=\"my-5 card-page-container large\">\n        <app-storybook-card *ngFor=\"let storybookcard of storybookcardsLarge\" [storybookcard]=\"storybookcard\">\n        </app-storybook-card>\n    </div>\n</div>"
+            "templateData": "<!--\n<div *ngIf=\"state === 'small'\">\n    <H2>Small Card Container</H2>\n    <div class=\"my-5 card-page-container\">\n        <app-storybook-card *ngFor=\"let storybookcard of storybookcards\" [storybookcard]=\"storybookcard\">\n        </app-storybook-card>\n    </div>\n</div>\n<div *ngIf=\"state ==='medium'\">\n    <H2>Medium Card Container</H2>\n    <div class=\"my-5 card-page-container\">\n        <app-storybook-card *ngFor=\"let storybookcard of storybookcardsMedium\" [storybookcard]=\"storybookcard\">\n        </app-storybook-card>\n    </div>\n</div>\n<div *ngIf=\"state ==='large'\">\n    <H2>Large Card Container</H2>\n    <div class=\"my-5 card-page-container large\">\n        <app-storybook-card *ngFor=\"let storybookcard of storybookcardsLarge\" [storybookcard]=\"storybookcard\">\n        </app-storybook-card>\n    </div>\n</div>\n-->\n<H2>{{type}} Card Container</H2>\n<div class=\"my-5 card-page-container {{type}}\">\n    <app-storybook-card *ngFor=\"let storybookcard of storybookcardsLarge\" [storybookcard]=\"storybookcard\">\n    </app-storybook-card>\n</div>\n"
         },
         {
             "name": "ProfileFormComponent",
@@ -654,7 +634,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div formGroupName=\"profile\">\n    <h2>Profile</h2>\n  \n    <label for=\"name\">Name: </label>\n    <input id=\"nameì\" type=\"text\" formControlName=\"name\">\n  \n    <label for=\"surname\">Surname: </label>\n    <input id=\"\" type=\"text\" formControlName=\"surname\">\n  \n    <label for=\"city\">City: </label>\n    <input id= \"city\" type=\"text\" formControlName=\"city\">\n\n    <label for=\"state\">State: </label>\n    <input id=\"state\" type=\"text\" formControlName=\"state\">\n  \n    <label for=\"zip\">Zip Code: </label>\n    <input id=\"zip\" type=\"text\" formControlName=\"zip\">\n  </div>"
+            "templateData": "<div formGroupName=\"profile\">\n    <h2>Profile</h2>\n  \n    <label for=\"name\">Name: </label>\n    <input id=\"nameì\" type=\"text\" formControlName=\"name\">\n  \n    <label for=\"surname\">Surname: </label>\n    <input id=\"\" type=\"text\" formControlName=\"surname\">\n  \n    <label for=\"city\">City: </label>\n    <input id= \"city\" type=\"text\" formControlName=\"city\">\n\n    <label for=\"state\">State: </label>\n    <input id=\"state\" type=\"text\" formControlName=\"state\">\n  \n    <label for=\"zip\">Zip Code: </label>\n    <input id=\"zip\" type=\"text\" formControlName=\"zip\">\n  </div>\n  "
         },
         {
             "name": "StorybookCardComponent",
@@ -2027,7 +2007,7 @@
                 "linktype": "component",
                 "name": "CardPageComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/10",
+                "coverageCount": "0/8",
                 "status": "low"
             },
             {
