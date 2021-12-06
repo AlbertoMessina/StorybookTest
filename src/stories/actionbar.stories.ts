@@ -7,7 +7,7 @@ import { Actionbar } from '../app/models/models'
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
   // Separare il nome con uno / crea nel canvans di Storybook una sezione. Concantenare più / crea sotto sezioni
-  title: 'storybookTest/Actionbar',
+  title: 'GenericComponent/card/Actionbar',
   component: ActionbarComponent,
   decorators: [
     moduleMetadata({

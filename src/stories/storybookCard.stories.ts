@@ -11,7 +11,7 @@ import { action } from '@storybook/addon-actions';
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
   // Separare il nome con uno / crea nel canvans di Storybook una sezione. Concantenare più / crea sotto sezioni
-  title: 'storybookTest/Card',
+  title: 'GenericComponent/Card/Card',
   component: StorybookCardComponent,
   // Per permettere la composizione con storybook bisogna importare entrambi i componenti
   decorators: [
@@ -20,12 +20,12 @@ export default {
       imports: [CommonModule]
     }),
     //👇 Wraps our stories with a decorator
-    componentWrapperDecorator(story => `<div class="m-1">${story}</div>`),
+    componentWrapperDecorator(story => `<div class="d-flex justify-content-center">${story}</div>`),
   ]
 } as Meta;
 
 // More on component templates: https://storybook.js.org/docs/angular/writing-stories/introduction#using-args
-const Template: Story<StorybookCard> = (args: StorybookCard) => ({
+const Template: Story<StorybookCardComponent> = (args: StorybookCardComponent) => ({
   props: {
     ...args,
     onClickAction: ActionbarStories.actionsData.onClickAction,
@@ -37,61 +37,68 @@ const Template: Story<StorybookCard> = (args: StorybookCard) => ({
 export const BaseCard = Template.bind({});
 // More on args: https://storybook.js.org/docs/angular/writing-stories/args
 BaseCard.args = {
-
-  actionbar: {
-    // with 
-    ...ActionbarStories.leftRoundedCart.args.actionbar,
-  },
-  card: {
-    id: '0',
-    title: 'Default Card',
-    imageSrc: '../../assets/Lunedi.jpg',
-    altImageSrc: 'monday crying frog',
-    type: 'medium-card'
-  },
+  storybookcard: {
+    card: {
+      id: '0',
+      title: 'Default Card',
+      imageSrc: '../../assets/Lunedi.jpg',
+      altImageSrc: 'monday crying frog',
+      type: 'medium-card',
+    },
+    actionbar: {
+      // with 
+      ...ActionbarStories.leftRoundedCart.args.actionbar,
+    },
+  }
 };
 
 export const NoImageCard = Template.bind({});
 // More on args: https://storybook.js.org/docs/angular/writing-stories/args
 NoImageCard.args = {
-
-
-  actionbar: {
-    ...ActionbarStories.Default.args.actionbar,
+  storybookcard: {
+    card: {
+      ...BaseCard.args.storybookcard.card,
+      id: '1',
+      title: 'No image card',
+      altImageSrc: 'Monday crying frog',
+      imageSrc: '',
+    },
+    actionbar: {
+      ...ActionbarStories.Default.args.actionbar,
+    },
   },
-  card: {
-    ...BaseCard.args.card,
-    id: '1',
-    title: 'No image card',
-    altImageSrc: 'Monday crying frog',
-    imageSrc: ''
-  }
+}
 
-};
 
 export const LargeImageCard = Template.bind({});
 LargeImageCard.args = {
-  actionbar: {
-    ...BaseCard.args.actionbar,
-  },
-  card: {
-    ...BaseCard.args.card,
-    title: 'Large image card',
-    imageSrc: '../../assets/martedi.jpg',
-    altImageSrc: 'Nice green guy',
-    type: 'large-card'
+  storybookcard: {
+    card: {
+      ...BaseCard.args.storybookcard.card,
+      title: 'Large image card',
+      imageSrc: '../../assets/martedi.jpg',
+      altImageSrc: 'Nice green guy',
+      type: 'large-card',
+    },
+    actionbar: {
+      ...BaseCard.args.storybookcard.actionbar,
+    },
   }
+
 }
 
 export const cardWithRightAction = Template.bind({});
 cardWithRightAction.args = {
-  actionbar: {
-    ...ActionbarStories.rightFlat.args.actionbar,
-  },
+storybookcard: {
   card: {
-    ...BaseCard.args.card,
+    ...BaseCard.args.storybookcard.card,
     title: 'Wow Right Action and flat button in a sigle Cards',
     imageSrc: '../../assets/mercoledi.jpg',
     altImageSrc: 'TACOS CATS',
-  }
+  },
+  actionbar: {
+    ...ActionbarStories.rightFlat.args.actionbar,
+  },
+}
+  
 }

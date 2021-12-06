@@ -15,7 +15,7 @@ export default {
     }),
   ],
   excludeStories: /.*Data$/,
-  title: 'StorybookWebSiteExample/TaskProva',
+  title: 'TESTEXAMPLE/TaskProva',
 } as Meta;
 
 export const actionsData = {

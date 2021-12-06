@@ -9,9 +9,8 @@ import { Actionbar, StorybookCard } from '../models/models'
 export class StorybookCardComponent implements OnInit {
 
   //child input
-  @Input() actionbar: Actionbar;
 
-  @Input() card: StorybookCard;
+  @Input() storybookcard: StorybookCard;
 
   @Output()
   onClickAction = new EventEmitter<Event>();

@@ -7,6 +7,10 @@ import { TaskComponent } from './task/task.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { StorybookCardComponent } from './storybook-card/storybook-card.component';
 import { ActionbarComponent } from './actionbar/actionbar.component';
+import { ProfileFormComponent } from './profile-form/profile-form.component';
+
+import { CardService } from './service/card.service';
+import { CardPageComponent } from './card-page/card-page.component';
 
 @NgModule({
   declarations: [
@@ -14,13 +18,17 @@ import { ActionbarComponent } from './actionbar/actionbar.component';
     TaskComponent,
     TaskListComponent,
     StorybookCardComponent,
-    ActionbarComponent
+    ActionbarComponent,
+    ProfileFormComponent,
+    CardPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    CardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

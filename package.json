@@ -24,6 +24,7 @@
     "@angular/router": "~12.2.0",
     "bootstrap": "^5.1.3",
     "rxjs": "~6.6.0",
+    "storybook-addon-mock": "^2.0.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

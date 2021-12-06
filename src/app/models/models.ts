@@ -1,7 +1,8 @@
 export interface StorybookCard {
-
-    actionbar?: Actionbar;
+   
     card : Card;
+    actionbar?: Actionbar;
+
 }
 
 export interface Actionbar {

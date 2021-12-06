@@ -20,7 +20,7 @@ export class ActionbarComponent implements OnInit {
     
   }
   
-  onClick(social : any){
+  onClick(social : any) {
     console.log(social);
     this.onClickAction.emit(social);
   }

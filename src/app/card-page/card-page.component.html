@@ -1,0 +1,28 @@
+<!--
+<div *ngIf="state === 'small'">
+    <H2>Small Card Container</H2>
+    <div class="my-5 card-page-container">
+        <app-storybook-card *ngFor="let storybookcard of storybookcards" [storybookcard]="storybookcard">
+        </app-storybook-card>
+    </div>
+</div>
+<div *ngIf="state ==='medium'">
+    <H2>Medium Card Container</H2>
+    <div class="my-5 card-page-container">
+        <app-storybook-card *ngFor="let storybookcard of storybookcardsMedium" [storybookcard]="storybookcard">
+        </app-storybook-card>
+    </div>
+</div>
+<div *ngIf="state ==='large'">
+    <H2>Large Card Container</H2>
+    <div class="my-5 card-page-container large">
+        <app-storybook-card *ngFor="let storybookcard of storybookcardsLarge" [storybookcard]="storybookcard">
+        </app-storybook-card>
+    </div>
+</div>
+-->
+<H2>{{type}} Card Container</H2>
+<div class="my-5 card-page-container {{type}}">
+    <app-storybook-card *ngFor="let storybookcard of storybookcardsLarge" [storybookcard]="storybookcard">
+    </app-storybook-card>
+</div>
