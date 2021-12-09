@@ -22,10 +22,19 @@ export class CardPageComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+  if(this.state =='small') {
     this.getSmallCard();
+  }
+  if(this.state =='large') {
     this.getLargeCard();
+  }
+
+  if(this.state =='medium') {
     this.getMediumCard();
-    console.log(this.storybookcards);
+  }
+  
+  console.log(this.storybookcards);
+  
   }
 
   getSmallCard() {

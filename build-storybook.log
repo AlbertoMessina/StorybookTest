@@ -21,249 +21,303 @@ Node.js version : v14.0.0
 
 Operating system : Linux 5.11
 
-[17:27:44] No configuration file found, switching to CLI flags.
-[17:27:44] Using tsconfig file : /home/alberto/project/storybookTest/tsconfig.json
-[17:27:44] Including      : /home/alberto/project/storybookTest/.browserslistrc
-[17:27:44] Including      : /home/alberto/project/storybookTest/.editorconfig
-[17:27:44] Including      : /home/alberto/project/storybookTest/.gitignore
-[17:27:44] Including      : /home/alberto/project/storybookTest/README.md
-[17:27:44] Including      : /home/alberto/project/storybookTest/angular.json
-[17:27:44] Including      : /home/alberto/project/storybookTest/build-storybook.log
-[17:27:44] Including      : /home/alberto/project/storybookTest/documentation.json
-[17:27:44] Including      : /home/alberto/project/storybookTest/karma.conf.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/package-lock.json
-[17:27:44] Including      : /home/alberto/project/storybookTest/package.json
-[17:27:44] Including      : /home/alberto/project/storybookTest/tsconfig.app.json
-[17:27:44] Including      : /home/alberto/project/storybookTest/tsconfig.json
-[17:27:44] Including      : /home/alberto/project/storybookTest/tsconfig.spec.json
-[17:27:44] Including      : /home/alberto/project/storybookTest/.storybook/main.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/.storybook/preview.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/.storybook/tsconfig.json
-[17:27:44] Ignoring       : /home/alberto/project/storybookTest/.storybook/typings.d.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/favicon.ico
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/index.html
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/main.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/polyfills.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/styles.scss
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/test.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/115.d5ea14c9.iframe.bundle.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/115.d5ea14c9.iframe.bundle.js.LICENSE.txt
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/177.1ea3eab0.iframe.bundle.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/236.0f2410d3.iframe.bundle.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/236.0f2410d3.iframe.bundle.js.LICENSE.txt
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/293.84e5f78c.iframe.bundle.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/293.84e5f78c.iframe.bundle.js.LICENSE.txt
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/295.1f9e11267c0942c06efc.manager.bundle.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/331.6773afb3.iframe.bundle.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/331.6773afb3.iframe.bundle.js.LICENSE.txt
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/331.bebd0d83654ed7c83cda.manager.bundle.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/331.bebd0d83654ed7c83cda.manager.bundle.js.LICENSE.txt
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/39.8781ae35.iframe.bundle.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/39.8781ae35.iframe.bundle.js.LICENSE.txt
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/459.197bb5b8.iframe.bundle.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/459.c95ac61918ec8ea1f0a1.manager.bundle.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/572.dd4bace9.iframe.bundle.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/572.dd4bace9.iframe.bundle.js.LICENSE.txt
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/574.f60fe43053fd35837aed.manager.bundle.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/574.fd95872e.iframe.bundle.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/701.bfbbc84b.iframe.bundle.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/72.d2a80f65.iframe.bundle.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/72.d2a80f65.iframe.bundle.js.LICENSE.txt
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/72.e81f2b0faa873f1dc4cd.manager.bundle.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/72.e81f2b0faa873f1dc4cd.manager.bundle.js.LICENSE.txt
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/868.5deaf48cbf44812267bb.manager.bundle.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/868.5deaf48cbf44812267bb.manager.bundle.js.LICENSE.txt
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/881.62e782f4.iframe.bundle.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/881.cfd5a3dfd069b40b9dd9.manager.bundle.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/935.e6d34a81.iframe.bundle.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/935.e6d34a81.iframe.bundle.js.LICENSE.txt
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/favicon.ico
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/iframe.html
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/index.html
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/main.35582845d8be982e6942.manager.bundle.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/main.a8f2d843.iframe.bundle.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/runtime~main.4ab65d9e8e51be882f87.manager.bundle.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/runtime~main.f77a806b.iframe.bundle.js
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/app/app-routing.module.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/app/app.component.html
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/app/app.component.scss
-[17:27:44] Ignoring       : /home/alberto/project/storybookTest/src/app/app.component.spec.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/app/app.component.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/app/app.module.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/assets/.gitkeep
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/assets/5296501_linkedin_network_linkedin logo_icon.svg
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/assets/5296511_network_social network_tumblr_tumblr logo_icon.svg
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/assets/5365678_fb_facebook_facebook logo_icon.svg
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/assets/Giovedi.jpg
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/assets/Lunedi.jpg
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/assets/bin.png
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/assets/check.svg
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/assets/martedi.jpg
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/assets/mercoledi.jpg
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/assets/shopping-cart.png
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/assets/star.svg
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/assets/venerdi.jpg
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/environments/environment.prod.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/environments/environment.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/stories/actionbar.stories.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/stories/storybookCard.stories.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/stories/task.stories.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/stories/tasklist.stories.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/assets/5296501_linkedin_network_linkedin logo_icon.svg
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/assets/5296511_network_social network_tumblr_tumblr logo_icon.svg
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/assets/5365678_fb_facebook_facebook logo_icon.svg
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/assets/Giovedi.jpg
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/assets/Lunedi.jpg
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/assets/bin.png
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/assets/check.svg
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/assets/martedi.jpg
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/assets/mercoledi.jpg
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/assets/shopping-cart.png
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/assets/star.svg
-[17:27:44] Including      : /home/alberto/project/storybookTest/storybook-static/assets/venerdi.jpg
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/app/actionbar/actionbar.component.html
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/app/actionbar/actionbar.component.scss
-[17:27:44] Ignoring       : /home/alberto/project/storybookTest/src/app/actionbar/actionbar.component.spec.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/app/actionbar/actionbar.component.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/app/models/models.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/app/models/taskList.model.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/app/storybook-card/storybook-card.component.html
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/app/storybook-card/storybook-card.component.scss
-[17:27:44] Ignoring       : /home/alberto/project/storybookTest/src/app/storybook-card/storybook-card.component.spec.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/app/models/task.model.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/app/storybook-card/storybook-card.component.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/app/task/task.component.html
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/app/task/task.component.scss
-[17:27:44] Ignoring       : /home/alberto/project/storybookTest/src/app/task/task.component.spec.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/app/task/task.component.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/app/task-list/task-list.component.html
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/app/task-list/task-list.component.scss
-[17:27:44] Ignoring       : /home/alberto/project/storybookTest/src/app/task-list/task-list.component.spec.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/app/task-list/task-list.component.ts
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/stories/assets/code-brackets.svg
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/stories/assets/colors.svg
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/stories/assets/comments.svg
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/stories/assets/direction.svg
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/stories/assets/flow.svg
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/stories/assets/plugin.svg
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/stories/assets/repo.svg
-[17:27:44] Including      : /home/alberto/project/storybookTest/src/stories/assets/stackalt.svg
-[17:27:44] Searching package.json file
-[17:27:44] package.json file found
-[17:27:44] Processing package.json dependencies
-[17:27:44] Searching README.md, CHANGELOG.md, CONTRIBUTING.md, LICENSE.md, TODO.md files
-[17:27:44] README.md file found
-[17:27:44] Error during /home/alberto/project/storybookTest/CHANGELOG read
-[17:27:44] Continuing without CHANGELOG.md file
-[17:27:44] Error during /home/alberto/project/storybookTest/CONTRIBUTING read
-[17:27:44] Continuing without CONTRIBUTING.md file
-[17:27:44] Error during /home/alberto/project/storybookTest/LICENSE read
-[17:27:44] Continuing without LICENSE.md file
-[17:27:44] Error during /home/alberto/project/storybookTest/TODO read
-[17:27:44] Continuing without TODO.md file
-[17:27:44] Get dependencies data
-[17:28:05] parsing        : /home/alberto/project/storybookTest/src/main.ts
-[17:28:05] parsing        : /home/alberto/project/storybookTest/src/polyfills.ts
-[17:28:05] parsing        : /home/alberto/project/storybookTest/src/test.ts
-[17:28:05] found          : require
-[17:28:05] found          : context
-[17:28:05] parsing        : /home/alberto/project/storybookTest/src/app/app-routing.module.ts
-[17:28:05] Analysing routes definitions and clean them if necessary
-[17:28:05] found          : AppRoutingModule
-[17:28:05]                : - imports:
-[17:28:05]                : 	- RouterModule
-[17:28:05]                : - exports:
-[17:28:05]                : 	- RouterModule
-[17:28:05] parsing        : /home/alberto/project/storybookTest/src/app/app.component.ts
-[17:28:05] found          : AppComponent
-[17:28:05] parsing        : /home/alberto/project/storybookTest/src/app/app.module.ts
-[17:28:05] found          : AppModule
-[17:28:05]                : - imports:
-[17:28:05]                : 	- BrowserModule
-[17:28:05]                : 	- AppRoutingModule
-[17:28:05]                : - declarations:
-[17:28:05]                : 	- AppComponent
-[17:28:05]                : 	- TaskComponent
-[17:28:05]                : 	- TaskListComponent
-[17:28:05]                : 	- StorybookCardComponent
-[17:28:05]                : 	- ActionbarComponent
-[17:28:05]                : - bootstrap:
-[17:28:05]                : 	- AppComponent
-[17:28:05] parsing        : /home/alberto/project/storybookTest/src/environments/environment.prod.ts
-[17:28:05] found          : environment
-[17:28:05] parsing        : /home/alberto/project/storybookTest/src/environments/environment.ts
-[17:28:05] found          : environment
-[17:28:05] parsing        : /home/alberto/project/storybookTest/src/stories/actionbar.stories.ts
-[17:28:05] found          : actionsData
-[17:28:05] found          : Template
-[17:28:05] found          : Default
-[17:28:05] found          : leftRoundedCart
-[17:28:05] found          : rightFlat
-[17:28:05] parsing        : /home/alberto/project/storybookTest/src/stories/storybookCard.stories.ts
-[17:28:05] found          : Template
-[17:28:05] found          : BaseCard
-[17:28:05] found          : NoImageCard
-[17:28:05] found          : LargeImageCard
-[17:28:05] found          : cardWithRightAction
-[17:28:05] parsing        : /home/alberto/project/storybookTest/src/stories/task.stories.ts
-[17:28:05] found          : actionsData
-[17:28:05] found          : Template
-[17:28:05] found          : Default
-[17:28:05] found          : Pinned
-[17:28:05] found          : Archived
-[17:28:05] parsing        : /home/alberto/project/storybookTest/src/stories/tasklist.stories.ts
-[17:28:05] found          : Template
-[17:28:05] found          : Default
-[17:28:05] found          : WithPinnedTasks
-[17:28:05] found          : Loading
-[17:28:05] found          : Empty
-[17:28:05] parsing        : /home/alberto/project/storybookTest/src/app/actionbar/actionbar.component.ts
-[17:28:05] found          : ActionbarComponent
-[17:28:05] parsing        : /home/alberto/project/storybookTest/src/app/models/models.ts
-[17:28:05] found          : StorybookCard
-[17:28:05] found          : Actionbar
-[17:28:05] found          : Card
-[17:28:05] found          : AlignType
-[17:28:05] found          : cardType
-[17:28:05] found          : contextType
-[17:28:05] parsing        : /home/alberto/project/storybookTest/src/app/models/taskList.model.ts
-[17:28:05] found          : Task
-[17:28:05] parsing        : /home/alberto/project/storybookTest/src/app/models/task.model.ts
-[17:28:05] found          : Task
-[17:28:05] parsing        : /home/alberto/project/storybookTest/src/app/storybook-card/storybook-card.component.ts
-[17:28:05] found          : StorybookCardComponent
-[17:28:05] parsing        : /home/alberto/project/storybookTest/src/app/task/task.component.ts
-[17:28:05] found          : TaskComponent
-[17:28:05] parsing        : /home/alberto/project/storybookTest/src/app/task-list/task-list.component.ts
-[17:28:06] found          : TaskListComponent
-[17:28:06] -------------------
-[17:28:06] Project statistics 
-[17:28:06] - files      : 119
-[17:28:06] - module     : 2
-[17:28:06] - component  : 5
-[17:28:06] - interface  : 5
-[17:28:06] -------------------
-[17:28:06] Prepare components
-[17:28:06]  ActionbarComponent has a templateUrl, include it
-[17:28:06]  ActionbarComponent has styleUrls, include them
-[17:28:06]  AppComponent has a templateUrl, include it
-[17:28:06]  AppComponent has styleUrls, include them
-[17:28:06]  StorybookCardComponent has a templateUrl, include it
-[17:28:06]  StorybookCardComponent has styleUrls, include them
-[17:28:06]  TaskComponent has a templateUrl, include it
-[17:28:06]  TaskComponent has styleUrls, include them
-[17:28:06]  TaskListComponent has a templateUrl, include it
-[17:28:06]  TaskListComponent has styleUrls, include them
-[17:28:06] Prepare modules
-[17:28:06] Process routes
-[17:28:06] Prepare interfaces
-[17:28:06] Prepare miscellaneous
-[17:28:06] Process documentation coverage report
-[17:28:06] Generating documentation in export format json
-[17:28:06] Documentation generated in ./ in 22.052 seconds
+[16:48:37] No configuration file found, switching to CLI flags.
+[16:48:37] Using tsconfig file : /home/alberto/project/storybookTest/tsconfig.json
+[16:48:37] Including      : /home/alberto/project/storybookTest/.browserslistrc
+[16:48:37] Including      : /home/alberto/project/storybookTest/.editorconfig
+[16:48:37] Including      : /home/alberto/project/storybookTest/.gitignore
+[16:48:37] Including      : /home/alberto/project/storybookTest/README.md
+[16:48:37] Including      : /home/alberto/project/storybookTest/angular.json
+[16:48:37] Including      : /home/alberto/project/storybookTest/build-storybook.log
+[16:48:37] Including      : /home/alberto/project/storybookTest/documentation.json
+[16:48:37] Including      : /home/alberto/project/storybookTest/karma.conf.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/package-lock.json
+[16:48:37] Including      : /home/alberto/project/storybookTest/package.json
+[16:48:37] Including      : /home/alberto/project/storybookTest/tsconfig.app.json
+[16:48:37] Including      : /home/alberto/project/storybookTest/tsconfig.json
+[16:48:37] Including      : /home/alberto/project/storybookTest/tsconfig.spec.json
+[16:48:37] Including      : /home/alberto/project/storybookTest/.storybook/main.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/.storybook/preview.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/.storybook/tsconfig.json
+[16:48:37] Ignoring       : /home/alberto/project/storybookTest/.storybook/typings.d.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/favicon.ico
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/index.html
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/main.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/polyfills.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/styles.scss
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/test.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/115.d5ea14c9.iframe.bundle.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/115.d5ea14c9.iframe.bundle.js.LICENSE.txt
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/177.1ea3eab0.iframe.bundle.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/236.0f2410d3.iframe.bundle.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/236.0f2410d3.iframe.bundle.js.LICENSE.txt
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/293.84e5f78c.iframe.bundle.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/293.84e5f78c.iframe.bundle.js.LICENSE.txt
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/295.1f9e11267c0942c06efc.manager.bundle.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/331.6773afb3.iframe.bundle.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/331.6773afb3.iframe.bundle.js.LICENSE.txt
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/331.bebd0d83654ed7c83cda.manager.bundle.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/331.bebd0d83654ed7c83cda.manager.bundle.js.LICENSE.txt
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/39.8781ae35.iframe.bundle.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/39.8781ae35.iframe.bundle.js.LICENSE.txt
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/459.197bb5b8.iframe.bundle.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/459.c95ac61918ec8ea1f0a1.manager.bundle.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/572.2491d187.iframe.bundle.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/572.2491d187.iframe.bundle.js.LICENSE.txt
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/574.f60fe43053fd35837aed.manager.bundle.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/574.fd95872e.iframe.bundle.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/701.bfbbc84b.iframe.bundle.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/72.d2a80f65.iframe.bundle.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/72.d2a80f65.iframe.bundle.js.LICENSE.txt
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/72.e1601ca23df6b1a35a6d.manager.bundle.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/72.e1601ca23df6b1a35a6d.manager.bundle.js.LICENSE.txt
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/868.5b6c6a444e3cf470f9a5.manager.bundle.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/868.5b6c6a444e3cf470f9a5.manager.bundle.js.LICENSE.txt
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/881.62e782f4.iframe.bundle.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/881.9b880549b90de5fa5e53.manager.bundle.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/935.e6d34a81.iframe.bundle.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/935.e6d34a81.iframe.bundle.js.LICENSE.txt
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/favicon.ico
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/iframe.html
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/index.html
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/main.1c155e29.iframe.bundle.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/main.4e0b4d7006246a919ce8.manager.bundle.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/runtime~main.dd7e2886a437ebd18368.manager.bundle.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/runtime~main.f77a806b.iframe.bundle.js
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/app-routing.module.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/app.component.html
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/app.component.scss
+[16:48:37] Ignoring       : /home/alberto/project/storybookTest/src/app/app.component.spec.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/app.component.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/app.module.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/assets/.gitkeep
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/assets/5296501_linkedin_network_linkedin logo_icon.svg
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/assets/5296511_network_social network_tumblr_tumblr logo_icon.svg
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/assets/5365678_fb_facebook_facebook logo_icon.svg
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/assets/Giovedi.jpg
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/assets/Lunedi.jpg
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/assets/bin.png
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/assets/check.svg
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/assets/firstimpact.jpeg
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/assets/martedi.jpg
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/assets/mercoledi.jpg
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/assets/secondImpact.jpeg
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/assets/shopping-cart.png
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/assets/star.svg
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/assets/thirdImpact.jpeg
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/assets/venerdi.jpg
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/environments/environment.prod.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/environments/environment.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/stories/actionbar.stories.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/stories/cardPage.stories.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/stories/profileForm.stories.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/stories/storybookCard.stories.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/stories/task.stories.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/stories/tasklist.stories.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/assets/5296501_linkedin_network_linkedin logo_icon.svg
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/assets/5296511_network_social network_tumblr_tumblr logo_icon.svg
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/assets/5365678_fb_facebook_facebook logo_icon.svg
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/assets/Giovedi.jpg
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/assets/Lunedi.jpg
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/assets/bin.png
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/assets/check.svg
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/assets/firstimpact.jpeg
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/assets/martedi.jpg
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/assets/mercoledi.jpg
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/assets/secondImpact.jpeg
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/assets/shopping-cart.png
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/assets/star.svg
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/assets/thirdImpact.jpeg
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/assets/venerdi.jpg
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/actionbar/actionbar.component.html
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/actionbar/actionbar.component.scss
+[16:48:37] Ignoring       : /home/alberto/project/storybookTest/src/app/actionbar/actionbar.component.spec.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/actionbar/actionbar.component.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/models/models.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/models/task.model.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/models/taskList.model.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/card-page/card-page.component.html
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/card-page/card-page.component.scss
+[16:48:37] Ignoring       : /home/alberto/project/storybookTest/src/app/card-page/card-page.component.spec.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/card-page/card-page.component.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/profile-form/profile-form.component.html
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/profile-form/profile-form.component.scss
+[16:48:37] Ignoring       : /home/alberto/project/storybookTest/src/app/profile-form/profile-form.component.spec.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/profile-form/profile-form.component.ts
+[16:48:37] Ignoring       : /home/alberto/project/storybookTest/src/app/service/card.service.spec.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/service/card.service.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/storybook-card/storybook-card.component.html
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/storybook-card/storybook-card.component.scss
+[16:48:37] Ignoring       : /home/alberto/project/storybookTest/src/app/storybook-card/storybook-card.component.spec.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/storybook-card/storybook-card.component.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/task/task.component.html
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/task/task.component.scss
+[16:48:37] Ignoring       : /home/alberto/project/storybookTest/src/app/task/task.component.spec.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/task/task.component.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/task-list/task-list.component.html
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/task-list/task-list.component.scss
+[16:48:37] Ignoring       : /home/alberto/project/storybookTest/src/app/task-list/task-list.component.spec.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/app/task-list/task-list.component.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/assets/data/card-mock.ts
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/stories/assets/code-brackets.svg
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/stories/assets/colors.svg
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/stories/assets/comments.svg
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/stories/assets/direction.svg
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/stories/assets/flow.svg
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/stories/assets/plugin.svg
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/stories/assets/repo.svg
+[16:48:37] Including      : /home/alberto/project/storybookTest/src/stories/assets/stackalt.svg
+[16:48:37] Including      : /home/alberto/project/storybookTest/storybook-static/assets/data/card-mock.ts
+[16:48:37] Searching package.json file
+[16:48:37] package.json file found
+[16:48:37] Processing package.json dependencies
+[16:48:37] Searching README.md, CHANGELOG.md, CONTRIBUTING.md, LICENSE.md, TODO.md files
+[16:48:37] README.md file found
+[16:48:37] Error during /home/alberto/project/storybookTest/CHANGELOG read
+[16:48:37] Continuing without CHANGELOG.md file
+[16:48:37] Error during /home/alberto/project/storybookTest/CONTRIBUTING read
+[16:48:37] Continuing without CONTRIBUTING.md file
+[16:48:37] Error during /home/alberto/project/storybookTest/LICENSE read
+[16:48:37] Continuing without LICENSE.md file
+[16:48:37] Error during /home/alberto/project/storybookTest/TODO read
+[16:48:37] Continuing without TODO.md file
+[16:48:37] Get dependencies data
+[16:49:02] parsing        : /home/alberto/project/storybookTest/src/main.ts
+[16:49:02] parsing        : /home/alberto/project/storybookTest/src/polyfills.ts
+[16:49:02] parsing        : /home/alberto/project/storybookTest/src/test.ts
+[16:49:02] found          : require
+[16:49:02] found          : context
+[16:49:02] parsing        : /home/alberto/project/storybookTest/src/app/app-routing.module.ts
+[16:49:02] Analysing routes definitions and clean them if necessary
+[16:49:02] found          : AppRoutingModule
+[16:49:02]                : - imports:
+[16:49:02]                : 	- RouterModule
+[16:49:02]                : - exports:
+[16:49:02]                : 	- RouterModule
+[16:49:02] parsing        : /home/alberto/project/storybookTest/src/app/app.component.ts
+[16:49:03] found          : AppComponent
+[16:49:03] parsing        : /home/alberto/project/storybookTest/src/app/app.module.ts
+[16:49:03] found          : AppModule
+[16:49:03]                : - imports:
+[16:49:03]                : 	- BrowserModule
+[16:49:03]                : 	- AppRoutingModule
+[16:49:03]                : - declarations:
+[16:49:03]                : 	- AppComponent
+[16:49:03]                : 	- TaskComponent
+[16:49:03]                : 	- TaskListComponent
+[16:49:03]                : 	- StorybookCardComponent
+[16:49:03]                : 	- ActionbarComponent
+[16:49:03]                : 	- ProfileFormComponent
+[16:49:03]                : 	- CardPageComponent
+[16:49:03]                : - providers:
+[16:49:03]                : 	- CardService
+[16:49:03]                : - bootstrap:
+[16:49:03]                : 	- AppComponent
+[16:49:03] parsing        : /home/alberto/project/storybookTest/src/environments/environment.prod.ts
+[16:49:03] found          : environment
+[16:49:03] parsing        : /home/alberto/project/storybookTest/src/environments/environment.ts
+[16:49:03] found          : environment
+[16:49:03] parsing        : /home/alberto/project/storybookTest/src/stories/actionbar.stories.ts
+[16:49:03] found          : actionsData
+[16:49:03] found          : Template
+[16:49:03] found          : Default
+[16:49:03] found          : leftRoundedCart
+[16:49:03] found          : rightFlat
+[16:49:03] parsing        : /home/alberto/project/storybookTest/src/stories/cardPage.stories.ts
+[16:49:03] found          : actionsData
+[16:49:03] found          : Template
+[16:49:03] found          : Default
+[16:49:03] found          : Medium
+[16:49:03] found          : Large
+[16:49:03] parsing        : /home/alberto/project/storybookTest/src/stories/profileForm.stories.ts
+[16:49:03] found          : actionsData
+[16:49:03] found          : Template
+[16:49:03] found          : Default
+[16:49:03] parsing        : /home/alberto/project/storybookTest/src/stories/storybookCard.stories.ts
+[16:49:03] found          : Template
+[16:49:03] found          : BaseCard
+[16:49:03] found          : NoImageCard
+[16:49:03] found          : LargeImageCard
+[16:49:03] found          : cardWithRightAction
+[16:49:03] parsing        : /home/alberto/project/storybookTest/src/stories/task.stories.ts
+[16:49:03] found          : actionsData
+[16:49:03] found          : Template
+[16:49:03] found          : Default
+[16:49:03] found          : Pinned
+[16:49:03] found          : Archived
+[16:49:03] parsing        : /home/alberto/project/storybookTest/src/stories/tasklist.stories.ts
+[16:49:03] found          : Template
+[16:49:03] found          : Default
+[16:49:03] found          : WithPinnedTasks
+[16:49:03] found          : Loading
+[16:49:03] found          : Empty
+[16:49:03] parsing        : /home/alberto/project/storybookTest/src/app/actionbar/actionbar.component.ts
+[16:49:03] found          : ActionbarComponent
+[16:49:03] parsing        : /home/alberto/project/storybookTest/src/app/models/models.ts
+[16:49:03] found          : StorybookCard
+[16:49:03] found          : Actionbar
+[16:49:03] found          : Card
+[16:49:03] found          : AlignType
+[16:49:03] found          : cardType
+[16:49:03] found          : contextType
+[16:49:03] parsing        : /home/alberto/project/storybookTest/src/app/models/task.model.ts
+[16:49:03] found          : Task
+[16:49:03] parsing        : /home/alberto/project/storybookTest/src/app/models/taskList.model.ts
+[16:49:03] found          : Task
+[16:49:03] parsing        : /home/alberto/project/storybookTest/src/app/card-page/card-page.component.ts
+[16:49:03] found          : CardPageComponent
+[16:49:03] parsing        : /home/alberto/project/storybookTest/src/app/profile-form/profile-form.component.ts
+[16:49:03] found          : ProfileFormComponent
+[16:49:03] parsing        : /home/alberto/project/storybookTest/src/app/service/card.service.ts
+[16:49:03] found          : CardService
+[16:49:03] parsing        : /home/alberto/project/storybookTest/src/app/storybook-card/storybook-card.component.ts
+[16:49:03] found          : StorybookCardComponent
+[16:49:03] parsing        : /home/alberto/project/storybookTest/src/app/task/task.component.ts
+[16:49:03] found          : TaskComponent
+[16:49:03] parsing        : /home/alberto/project/storybookTest/src/app/task-list/task-list.component.ts
+[16:49:03] found          : TaskListComponent
+[16:49:03] parsing        : /home/alberto/project/storybookTest/src/assets/data/card-mock.ts
+[16:49:03] found          : SmallStorybookCard
+[16:49:03] found          : MediumStorybookCard
+[16:49:03] found          : LargeStorybookCard
+[16:49:03] parsing        : /home/alberto/project/storybookTest/storybook-static/assets/data/card-mock.ts
+[16:49:03] found          : SmallStorybookCard
+[16:49:03] found          : MediumStorybookCard
+[16:49:03] found          : LargeStorybookCard
+[16:49:03] -------------------
+[16:49:03] Project statistics 
+[16:49:03] - files      : 136
+[16:49:03] - module     : 2
+[16:49:03] - component  : 7
+[16:49:03] - injectable : 1
+[16:49:03] - interface  : 5
+[16:49:03] -------------------
+[16:49:03] Prepare components
+[16:49:03]  ActionbarComponent has a templateUrl, include it
+[16:49:03]  ActionbarComponent has styleUrls, include them
+[16:49:03]  AppComponent has a templateUrl, include it
+[16:49:03]  AppComponent has styleUrls, include them
+[16:49:03]  CardPageComponent has a templateUrl, include it
+[16:49:03]  CardPageComponent has styleUrls, include them
+[16:49:03]  ProfileFormComponent has a templateUrl, include it
+[16:49:03]  ProfileFormComponent has styleUrls, include them
+[16:49:03]  StorybookCardComponent has a templateUrl, include it
+[16:49:03]  StorybookCardComponent has styleUrls, include them
+[16:49:03]  TaskComponent has a templateUrl, include it
+[16:49:03]  TaskComponent has styleUrls, include them
+[16:49:03]  TaskListComponent has a templateUrl, include it
+[16:49:03]  TaskListComponent has styleUrls, include them
+[16:49:03] Prepare modules
+[16:49:03] Prepare injectables
+[16:49:03] Process routes
+[16:49:03] Prepare interfaces
+[16:49:03] Prepare miscellaneous
+[16:49:03] Process documentation coverage report
+[16:49:03] Generating documentation in export format json
+[16:49:03] Documentation generated in ./ in 26.703 seconds
 info @storybook/angular v6.4.1
 info 
-info => Cleaning outputDir: /tmp/chromatic--14770-8AAQSO5IwnW6
+info => Cleaning outputDir: /tmp/chromatic--16836-7mp9yNCFNVF1
 info => Loading presets
 info => Compiling manager..
 info => Compiling preview..
@@ -397,8 +451,8 @@ Starting type checking service...
 <s> [webpack.Progress] 10% building 0/1 entries 0/0 dependencies 0/0 modules
 <s> [webpack.Progress] 10% building 0/18 entries 1/18 dependencies 0/0 modules
 <s> [webpack.Progress] 10% building import loader ./node_modules/babel-loader/lib/index.js
-<s> [webpack.Progress] 10% building 0/18 entries 10/18 dependencies 0/10 modules
-<s> [webpack.Progress] 10% building 0/18 entries 11/18 dependencies 0/10 modules
+<s> [webpack.Progress] 10% building 0/18 entries 8/18 dependencies 0/8 modules
+<s> [webpack.Progress] 10% building 0/18 entries 9/18 dependencies 0/8 modules
 <s> [webpack.Progress] 10% building import loader ./node_modules/style-loader/dist/cjs.js
 <s> [webpack.Progress] 10% building import loader ./node_modules/css-loader/dist/cjs.js
 <s> [webpack.Progress] 10% building import loader ./node_modules/postcss-loader/dist/cjs.js
@@ -406,77 +460,84 @@ Starting type checking service...
 <s> [webpack.Progress] 10% building import loader ./node_modules/sass-loader/dist/cjs.js
 <s> [webpack.Progress] 10% building 0/18 entries 13/18 dependencies 0/13 modules
 <s> [webpack.Progress] 10% building 0/18 entries 20/65 dependencies 0/19 modules
-<s> [webpack.Progress] 10% building 0/18 entries 38/79 dependencies 0/36 modules
-<s> [webpack.Progress] 10% building 0/18 entries 70/159 dependencies 12/57 modules
+<s> [webpack.Progress] 10% building 0/18 entries 36/73 dependencies 0/34 modules
+<s> [webpack.Progress] 10% building 0/18 entries 67/128 dependencies 9/57 modules
+<s> [webpack.Progress] 10% building 0/18 entries 100/207 dependencies 13/74 modules
 <s> [webpack.Progress] 10% building import loader ./node_modules/ts-loader/index.js
 <s> [webpack.Progress] 10% building import loader ./node_modules/@storybook/angular/dist/ts3.9/server/ngx-template-loader/index.js
 <s> [webpack.Progress] 10% building import loader ./node_modules/@storybook/source-loader/dist/cjs/index.js
-<s> [webpack.Progress] 10% building 0/18 entries 168/207 dependencies 13/95 modules
-<s> [webpack.Progress] 10% building 0/18 entries 170/234 dependencies 14/97 modules
-<s> [webpack.Progress] 10% building 0/18 entries 193/462 dependencies 15/100 modules
-<s> [webpack.Progress] 10% building 0/18 entries 300/480 dependencies 16/158 modules
-<s> [webpack.Progress] 10% building 0/18 entries 453/500 dependencies 16/238 modules
-<s> [webpack.Progress] 10% building 0/18 entries 500/776 dependencies 18/239 modules
-<s> [webpack.Progress] 13% building 1/18 entries 540/776 dependencies 22/262 modules
-<s> [webpack.Progress] 13% building 1/18 entries 757/800 dependencies 37/308 modules
-<s> [webpack.Progress] 13% building 1/18 entries 794/882 dependencies 45/308 modules
-<s> [webpack.Progress] 13% building 1/18 entries 900/1126 dependencies 64/310 modules
+<s> [webpack.Progress] 10% building 0/18 entries 176/209 dependencies 13/103 modules
+<s> [webpack.Progress] 10% building 0/18 entries 179/236 dependencies 14/106 modules
+<s> [webpack.Progress] 10% building 0/18 entries 221/500 dependencies 15/111 modules
+<s> [webpack.Progress] 10% building 0/18 entries 393/541 dependencies 15/200 modules
+<s> [webpack.Progress] 10% building 0/18 entries 500/541 dependencies 15/245 modules
+<s> [webpack.Progress] 10% building 0/18 entries 513/600 dependencies 17/253 modules
+<s> [webpack.Progress] 13% building 1/18 entries 575/788 dependencies 28/271 modules
+<s> [webpack.Progress] 13% building 1/18 entries 717/788 dependencies 38/288 modules
+<s> [webpack.Progress] 13% building 1/18 entries 764/800 dependencies 39/313 modules
+<s> [webpack.Progress] 13% building 1/18 entries 803/888 dependencies 44/314 modules
+<s> [webpack.Progress] 13% building 1/18 entries 864/1100 dependencies 61/315 modules
+<s> [webpack.Progress] 13% building 1/18 entries 1000/1171 dependencies 67/326 modules
 [BABEL] Note: The code generator has deoptimised the styling of /home/alberto/project/storybookTest/node_modules/prettier/standalone.js as it exceeds the max of 500KB.
-<s> [webpack.Progress] 13% building 1/18 entries 1000/1167 dependencies 66/328 modules
-<s> [webpack.Progress] 13% building 1/18 entries 1133/1200 dependencies 72/344 modules
-<s> [webpack.Progress] 13% building 1/18 entries 1200/1328 dependencies 96/351 modules
-<s> [webpack.Progress] 13% building 1/18 entries 1330/1400 dependencies 123/382 modules
-<s> [webpack.Progress] 13% building 1/18 entries 1397/1600 dependencies 170/383 modules
-<s> [webpack.Progress] 13% building 1/18 entries 1530/1775 dependencies 203/400 modules
-<s> [webpack.Progress] 13% building 1/18 entries 1700/1775 dependencies 212/494 modules
+<s> [webpack.Progress] 13% building 1/18 entries 1100/1175 dependencies 68/338 modules
+<s> [webpack.Progress] 13% building 1/18 entries 1176/1300 dependencies 95/351 modules
+<s> [webpack.Progress] 13% building 1/18 entries 1300/1333 dependencies 105/379 modules
+<s> [webpack.Progress] 13% building 1/18 entries 1338/1400 dependencies 123/379 modules
+<s> [webpack.Progress] 13% building 1/18 entries 1538/1735 dependencies 202/400 modules
+<s> [webpack.Progress] 13% building 1/18 entries 1683/1735 dependencies 215/500 modules
 <s> [webpack.Progress] 13% building import loader ./node_modules/raw-loader/dist/cjs.js
-<s> [webpack.Progress] 13% building 1/18 entries 1714/1775 dependencies 215/506 modules
-<s> [webpack.Progress] 16% building 2/18 entries 1714/1775 dependencies 216/506 modules
-<s> [webpack.Progress] 16% building 2/18 entries 1760/1800 dependencies 217/541 modules
-<s> [webpack.Progress] 16% building 2/18 entries 1849/2000 dependencies 256/543 modules
-<s> [webpack.Progress] 16% building 2/18 entries 2071/2200 dependencies 298/569 modules
-<s> [webpack.Progress] 16% building 2/18 entries 2200/2377 dependencies 305/585 modules
-<s> [webpack.Progress] 16% building 2/18 entries 2400/2498 dependencies 328/627 modules
-<s> [webpack.Progress] 16% building 2/18 entries 2456/2600 dependencies 338/630 modules
-<s> [webpack.Progress] 16% building 2/18 entries 2487/2700 dependencies 342/645 modules
-<s> [webpack.Progress] 16% building 2/18 entries 2700/2877 dependencies 353/771 modules
-<s> [webpack.Progress] 16% building 2/18 entries 2891/3000 dependencies 388/813 modules
-<s> [webpack.Progress] 16% building 2/18 entries 3000/3083 dependencies 422/815 modules
-<s> [webpack.Progress] 16% building 2/18 entries 3153/3198 dependencies 500/835 modules
-<s> [webpack.Progress] 16% building 2/18 entries 3175/3200 dependencies 512/838 modules
-<s> [webpack.Progress] 16% building 2/18 entries 3400/3571 dependencies 563/839 modules
-<s> [webpack.Progress] 16% building 2/18 entries 3529/3600 dependencies 584/868 modules
-<s> [webpack.Progress] 16% building 2/18 entries 3642/3693 dependencies 618/900 modules
-<s> [webpack.Progress] 17% building 2/18 entries 3771/3900 dependencies 705/944 modules
-<s> [webpack.Progress] 18% building 2/18 entries 3959/4023 dependencies 737/1000 modules
-<s> [webpack.Progress] 18% building 2/18 entries 4020/4100 dependencies 745/1026 modules
-<s> [webpack.Progress] 18% building 2/18 entries 4222/4258 dependencies 770/1100 modules
-<s> [webpack.Progress] 18% building 2/18 entries 4296/4400 dependencies 783/1129 modules
-<s> [webpack.Progress] 19% building 2/18 entries 4435/4500 dependencies 844/1159 modules
-<s> [webpack.Progress] 20% building 2/18 entries 4641/4700 dependencies 920/1199 modules
-<s> [webpack.Progress] 20% building 2/18 entries 4712/4800 dependencies 944/1207 modules
-<s> [webpack.Progress] 21% building 2/18 entries 4876/4912 dependencies 1000/1227 modules
-<s> [webpack.Progress] 21% building 2/18 entries 5000/5029 dependencies 1072/1264 modules
-<s> [webpack.Progress] 22% building 2/18 entries 5049/5092 dependencies 1100/1281 modules
-<s> [webpack.Progress] 22% building 3/18 entries 5142/5204 dependencies 1164/1311 modules
-<s> [webpack.Progress] 22% building 4/18 entries 5142/5204 dependencies 1165/1311 modules
-<s> [webpack.Progress] 25% building 5/18 entries 5142/5204 dependencies 1166/1311 modules
-<s> [webpack.Progress] 28% building 6/18 entries 5142/5204 dependencies 1167/1311 modules
-<s> [webpack.Progress] 31% building 7/18 entries 5142/5204 dependencies 1168/1311 modules
-<s> [webpack.Progress] 34% building 8/18 entries 5142/5204 dependencies 1169/1311 modules
-<s> [webpack.Progress] 37% building 9/18 entries 5142/5204 dependencies 1170/1311 modules
-<s> [webpack.Progress] 40% building 10/18 entries 5142/5204 dependencies 1171/1311 modules
-<s> [webpack.Progress] 43% building 11/18 entries 5142/5204 dependencies 1172/1311 modules
-<s> [webpack.Progress] 46% building 12/18 entries 5142/5204 dependencies 1173/1311 modules
-<s> [webpack.Progress] 49% building 13/18 entries 5142/5204 dependencies 1177/1311 modules
-<s> [webpack.Progress] 52% building 14/18 entries 5142/5204 dependencies 1181/1311 modules
-<s> [webpack.Progress] 52% building 14/18 entries 5351/5400 dependencies 1236/1351 modules
-<s> [webpack.Progress] 52% building 14/18 entries 5594/5624 dependencies 1300/1394 modules
-<s> [webpack.Progress] 55% building 15/18 entries 5786/5794 dependencies 1412/1443 modules
-<s> [webpack.Progress] 55% building 15/18 entries 5798/5800 dependencies 1416/1450 modules
-<s> [webpack.Progress] 58% building 16/18 entries 5811/5811 dependencies 1434/1454 modules
-<s> [webpack.Progress] 61% building 17/18 entries 5813/5813 dependencies 1454/1455 modules
-<s> [webpack.Progress] 65% building 18/18 entries 5813/5813 dependencies 1455/1455 modules
+<s> [webpack.Progress] 13% building 1/18 entries 1691/1739 dependencies 215/507 modules
+<s> [webpack.Progress] 13% building 1/18 entries 1716/1800 dependencies 218/526 modules
+<s> [webpack.Progress] 13% building 1/18 entries 1718/1900 dependencies 225/526 modules
+<s> [webpack.Progress] 16% building 2/18 entries 1719/1928 dependencies 228/526 modules
+<s> [webpack.Progress] 16% building 2/18 entries 1900/1932 dependencies 279/559 modules
+<s> [webpack.Progress] 16% building 2/18 entries 1959/2200 dependencies 292/568 modules
+<s> [webpack.Progress] 16% building 2/18 entries 2230/2293 dependencies 313/600 modules
+<s> [webpack.Progress] 16% building 2/18 entries 2274/2300 dependencies 315/620 modules
+<s> [webpack.Progress] 16% building 2/18 entries 2298/2400 dependencies 332/620 modules
+<s> [webpack.Progress] 16% building 2/18 entries 2500/2745 dependencies 338/749 modules
+<s> [webpack.Progress] 16% building 2/18 entries 2700/2745 dependencies 369/787 modules
+<s> [webpack.Progress] 16% building 2/18 entries 2800/2954 dependencies 385/801 modules
+<s> [webpack.Progress] 16% building 2/18 entries 2938/3000 dependencies 429/823 modules
+<s> [webpack.Progress] 16% building 2/18 entries 3000/3047 dependencies 450/823 modules
+<s> [webpack.Progress] 16% building 2/18 entries 3111/3200 dependencies 514/831 modules
+<s> [webpack.Progress] 16% building 2/18 entries 3359/3400 dependencies 551/853 modules
+<s> [webpack.Progress] 16% building 2/18 entries 3556/3647 dependencies 600/857 modules
+<s> [webpack.Progress] 17% building 2/18 entries 3675/3800 dependencies 682/902 modules
+<s> [webpack.Progress] 17% building 2/18 entries 3773/3900 dependencies 695/958 modules
+<s> [webpack.Progress] 17% building 2/18 entries 3800/3982 dependencies 702/958 modules
+<s> [webpack.Progress] 18% building 2/18 entries 3951/4055 dependencies 735/1000 modules
+<s> [webpack.Progress] 18% building 2/18 entries 4056/4100 dependencies 748/1068 modules
+<s> [webpack.Progress] 18% building 2/18 entries 4100/4194 dependencies 751/1071 modules
+<s> [webpack.Progress] 18% building 2/18 entries 4200/4341 dependencies 765/1099 modules
+<s> [webpack.Progress] 18% building 2/18 entries 4321/4400 dependencies 775/1148 modules
+<s> [webpack.Progress] 18% building 2/18 entries 4370/4450 dependencies 800/1149 modules
+<s> [webpack.Progress] 19% building 2/18 entries 4500/4537 dependencies 863/1183 modules
+<s> [webpack.Progress] 19% building 2/18 entries 4567/4653 dependencies 900/1195 modules
+<s> [webpack.Progress] 20% building 2/18 entries 4700/4732 dependencies 927/1214 modules
+<s> [webpack.Progress] 20% building 2/18 entries 4835/4900 dependencies 973/1219 modules
+<s> [webpack.Progress] 21% building 2/18 entries 4949/5000 dependencies 1044/1252 modules
+<s> [webpack.Progress] 21% building 2/18 entries 5000/5044 dependencies 1077/1258 modules
+<s> [webpack.Progress] 22% building 2/18 entries 5087/5117 dependencies 1122/1300 modules
+<s> [webpack.Progress] 23% building 3/18 entries 5173/5198 dependencies 1183/1327 modules
+<s> [webpack.Progress] 23% building 4/18 entries 5173/5198 dependencies 1184/1327 modules
+<s> [webpack.Progress] 25% building 5/18 entries 5173/5198 dependencies 1185/1327 modules
+<s> [webpack.Progress] 28% building 6/18 entries 5173/5198 dependencies 1186/1327 modules
+<s> [webpack.Progress] 31% building 7/18 entries 5173/5198 dependencies 1187/1327 modules
+<s> [webpack.Progress] 34% building 8/18 entries 5173/5198 dependencies 1188/1327 modules
+<s> [webpack.Progress] 37% building 9/18 entries 5173/5198 dependencies 1189/1327 modules
+<s> [webpack.Progress] 40% building 10/18 entries 5173/5198 dependencies 1190/1327 modules
+<s> [webpack.Progress] 43% building 11/18 entries 5173/5198 dependencies 1191/1327 modules
+<s> [webpack.Progress] 46% building 12/18 entries 5173/5198 dependencies 1192/1327 modules
+<s> [webpack.Progress] 49% building 13/18 entries 5173/5198 dependencies 1193/1327 modules
+<s> [webpack.Progress] 52% building 14/18 entries 5173/5198 dependencies 1197/1327 modules
+<s> [webpack.Progress] 52% building 14/18 entries 5300/5372 dependencies 1225/1356 modules
+<s> [webpack.Progress] 52% building 14/18 entries 5500/5550 dependencies 1275/1385 modules
+<s> [webpack.Progress] 52% building 14/18 entries 5685/5700 dependencies 1330/1425 modules
+<s> [webpack.Progress] 55% building 15/18 entries 5804/5806 dependencies 1421/1452 modules
+<s> [webpack.Progress] 58% building 16/18 entries 5827/5827 dependencies 1444/1460 modules
+<s> [webpack.Progress] 61% building 17/18 entries 5837/5837 dependencies 1464/1465 modules
+<s> [webpack.Progress] 65% building 18/18 entries 5837/5837 dependencies 1465/1465 modules
 <s> [webpack.Progress] 65% building
 <s> [webpack.Progress] 69% building finish
 <s> [webpack.Progress] 69% building finish
@@ -576,11 +637,11 @@ Starting type checking service...
 <s> [webpack.Progress] 92% sealing asset processing copy-webpack-plugin
 <s> [webpack.Progress] 92% sealing asset processing PersistentChildCompilerSingletonPlugin
 <s> [webpack.Progress] 92% sealing asset processing TerserPlugin
-info => Manager built (3.12 min)
+info => Manager built (4.2 min)
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.d33b921f.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.d33b921f.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.1afd20b7.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin main.1afd20b7.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin runtime~main.cdca406c.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin runtime~main.cdca406c.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 701.58620e3d.iframe.bundle.js generate SourceMap
@@ -605,8 +666,8 @@ info => Manager built (3.12 min)
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 331.16f64f40.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 935.46e36c30.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 935.46e36c30.iframe.bundle.js generated SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 572.07721d80.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 572.07721d80.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 572.f87b1d20.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 572.f87b1d20.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 115.972c1a46.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin 115.972c1a46.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing SourceMapDevToolPlugin resolve sources
@@ -617,8 +678,8 @@ info => Manager built (3.12 min)
 <s> [webpack.Progress] 92% sealing asset processing HtmlWebpackPlugin
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.1d91b8bc.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.1d91b8bc.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.756a4f26.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin main.756a4f26.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin runtime~main.f77a806b.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin runtime~main.f77a806b.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 701.bfbbc84b.iframe.bundle.js generate SourceMap
@@ -643,8 +704,8 @@ info => Manager built (3.12 min)
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 331.6773afb3.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 935.e6d34a81.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 935.e6d34a81.iframe.bundle.js generated SourceMap
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 572.2491d187.iframe.bundle.js generate SourceMap
-<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 572.2491d187.iframe.bundle.js generated SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 572.a1583c83.iframe.bundle.js generate SourceMap
+<s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 572.a1583c83.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 115.d5ea14c9.iframe.bundle.js generate SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin 115.d5ea14c9.iframe.bundle.js generated SourceMap
 <s> [webpack.Progress] 92% sealing asset processing RealContentHashPlugin resolve sources
@@ -676,13 +737,11 @@ info => Manager built (3.12 min)
 <s> [webpack.Progress] 99% cache begin idle
 <s> [webpack.Progress] 100% 
 
-info => Preview built (3.55 min)
+info => Preview built (4.67 min)
 WARN System.import() is deprecated and will be removed soon. Use import() instead.
 WARN For more info visit https://webpack.js.org/guides/code-splitting/
 WARN System.import() is deprecated and will be removed soon. Use import() instead.
 WARN For more info visit https://webpack.js.org/guides/code-splitting/
-WARN export 'Actionbar' (imported as 'Actionbar') was not found in '../models/models' (module has no exports)
-WARN export 'Actionbar' (imported as 'Actionbar') was not found in '../models/models' (module has no exports)
 WARN export 'Actionbar' (imported as 'Actionbar') was not found in '../models/models' (module has no exports)
 WARN export 'Actionbar' (imported as 'Actionbar') was not found in '../models/models' (module has no exports)
 WARN export 'StorybookCard' (imported as 'StorybookCard') was not found in '../models/models' (module has no exports)
@@ -692,20 +751,20 @@ WARN This can impact web performance.
 WARN Assets: 
 WARN   assets/martedi.jpg (261 KiB)
 WARN   assets/mercoledi.jpg (401 KiB)
-WARN   main.1d91b8bc.iframe.bundle.js (246 KiB)
+WARN   main.756a4f26.iframe.bundle.js (292 KiB)
 WARN   293.84e5f78c.iframe.bundle.js (645 KiB)
 WARN   236.0f2410d3.iframe.bundle.js (590 KiB)
-WARN   572.2491d187.iframe.bundle.js (2.74 MiB)
+WARN   572.a1583c83.iframe.bundle.js (2.74 MiB)
 WARN   115.d5ea14c9.iframe.bundle.js (589 KiB)
 WARN entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
 WARN Entrypoints:
-WARN   main (2.99 MiB)
+WARN   main (3.04 MiB)
 WARN       runtime~main.f77a806b.iframe.bundle.js
-WARN       572.2491d187.iframe.bundle.js
-WARN       main.1d91b8bc.iframe.bundle.js
+WARN       572.a1583c83.iframe.bundle.js
+WARN       main.756a4f26.iframe.bundle.js
 WARN 
 <s> [webpack.Progress] 99% cache shutdown
 <s> [webpack.Progress] 99% cache shutdown
 <s> [webpack.Progress] 100% 
 
-info => Output directory: /tmp/chromatic--14770-8AAQSO5IwnW6
+info => Output directory: /tmp/chromatic--16836-7mp9yNCFNVF1

@@ -1,19 +1,30 @@
-<div formGroupName="profile">
-    <h2>Profile</h2>
-  
-    <label for="name">Name: </label>
-    <input id="nameì" type="text" formControlName="name">
-  
-    <label for="surname">Surname: </label>
-    <input id="" type="text" formControlName="surname">
-  
-    <label for="city">City: </label>
-    <input id= "city" type="text" formControlName="city">
-
-    <label for="state">State: </label>
-    <input id="state" type="text" formControlName="state">
-  
-    <label for="zip">Zip Code: </label>
-    <input id="zip" type="text" formControlName="zip">
+<h2>Profile</h2>
+<form [formGroup]='profileForm' (ngSubmit)="onSubmit()">
+  <div class="row input-row-container">
+    <div class="col-md-4">
+      <reactive-form-input [input_id]="name" [type]="text" label="First name" placeholder="Insert first name" [control]="profileForm.get('name')">
+      </reactive-form-input>
+    </div>
+    <div class="col-md-4">
+      <reactive-form-input [input_id]="surname" [type]="text" label="Second name" placeholder="Insert second name"
+        [control]="profileForm.get('surname')">
+      </reactive-form-input>
+    </div>
   </div>
-  
+
+  <div class="row input-row-container">
+    <div class="col-md-4">
+      <reactive-form-input [input_id]="city" [type]="text" label="City" placeholder="City" [control]="profileForm.get('city')"> 
+      </reactive-form-input>
+    </div>
+    <div class="col-md-4">
+      <reactive-form-input [input_id]="state" [type]="text" label="State" placeholder="State" [control]="profileForm.get('state')">
+      </reactive-form-input>
+    </div>
+    <div class="col-md-4">
+      <reactive-form-input [input_id]="zip" [type]="text" label="zip" placeholder="Zip code" [control]="profileForm.get('zip')">
+      </reactive-form-input>
+    </div>
+  </div>
+  <button [disabled]="!profileForm.valid"  class="submit-btn" type="submit">BottoneDiSalva</button>
+</form>

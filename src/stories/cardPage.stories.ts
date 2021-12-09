@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { action } from '@storybook/addon-actions';
 
-import { CardService } from 'src/app/service/card.service';
+import { SmallStorybookCard , LargeStorybookCard, MediumStorybookCard } from 'src/assets/data/card-mock';
 import { CardPageComponent } from 'src/app/card-page/card-page.component';
 import { StorybookCardComponent } from 'src/app/storybook-card/storybook-card.component';
 import { ActionbarComponent } from 'src/app/actionbar/actionbar.component';
@@ -36,17 +36,20 @@ const Template: Story<CardPageComponent> = args => ({
 
 export const Default = Template.bind({});
 Default.args = {
+    storybookcards: SmallStorybookCard,
     state: 'small'
 };
 
 
 export const Medium = Template.bind({});
 Medium.args = {
+    storybookcards: MediumStorybookCard,
     state: 'medium'
 };
 
 
 export const Large = Template.bind({});
 Large.args = {
+    storybookcards: LargeStorybookCard,
     state: 'large'
 };

@@ -5,13 +5,15 @@ import { CommonModule } from '@angular/common';
 import { action } from '@storybook/addon-actions';
 
 import { ProfileFormComponent } from '../app/profile-form/profile-form.component';
+import { ReactiveFormsModule, FormControl } from '@angular/forms';
+import { ReactiveFormInputComponent } from 'src/app/component/form/reactive-form-input/reactive-form-input.component';
 
 export default {
     component: ProfileFormComponent,
     decorators: [
         moduleMetadata({
-            declarations: [ProfileFormComponent],
-            imports: [CommonModule],
+            declarations: [ProfileFormComponent, ReactiveFormInputComponent],
+            imports: [CommonModule, ReactiveFormsModule],
         }),
     ],
     excludeStories: /.*Data$/,
@@ -26,7 +28,6 @@ const Template: Story<ProfileFormComponent> = args => ({
     props: {
         ...args,
         // onPinTask: actionsData.onPinTask,
-
     },
 });
 

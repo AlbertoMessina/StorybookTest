@@ -18,7 +18,7 @@ export default {
         //👇 Wraps our stories with a decorator
         componentWrapperDecorator(story => `<div class="m-3">${story}</div>`),
     ],
-    title: 'TEXT/TaskListProva',
+    title: 'Fuffa/TaskListProva',
 } as Meta;
 
 const Template: Story<TaskListComponent> = args => ({

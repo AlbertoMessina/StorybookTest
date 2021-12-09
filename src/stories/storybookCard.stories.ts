@@ -89,16 +89,16 @@ LargeImageCard.args = {
 
 export const cardWithRightAction = Template.bind({});
 cardWithRightAction.args = {
-storybookcard: {
-  card: {
-    ...BaseCard.args.storybookcard.card,
-    title: 'Wow Right Action and flat button in a sigle Cards',
-    imageSrc: '../../assets/mercoledi.jpg',
-    altImageSrc: 'TACOS CATS',
-  },
-  actionbar: {
-    ...ActionbarStories.rightFlat.args.actionbar,
-  },
-}
-  
+  storybookcard: {
+    card: {
+      ...BaseCard.args.storybookcard.card,
+      title: 'Wow Right Action and flat button in a sigle Cards',
+      imageSrc: '../../assets/mercoledi.jpg',
+      altImageSrc: 'TACOS CATS',
+    },
+    actionbar: {
+      ...ActionbarStories.rightFlat.args.actionbar,
+    },
+  }
+
 }

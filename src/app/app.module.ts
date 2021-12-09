@@ -11,7 +11,7 @@ import { ProfileFormComponent } from './profile-form/profile-form.component';
 
 import { CardService } from './service/card.service';
 import { CardPageComponent } from './card-page/card-page.component';
-
+import { ReactiveFormInputComponent } from './component/form/reactive-form-input/reactive-form-input.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,11 +20,12 @@ import { CardPageComponent } from './card-page/card-page.component';
     StorybookCardComponent,
     ActionbarComponent,
     ProfileFormComponent,
-    CardPageComponent
+    CardPageComponent,
+    ReactiveFormInputComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
     CardService
