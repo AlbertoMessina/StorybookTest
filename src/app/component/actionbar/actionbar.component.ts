@@ -1,7 +1,8 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Inject, Input, OnInit, Output } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
-import { Actionbar } from '../models/models';
-import { AlignType } from '../models/models';
+import { Actionbar } from '../../models/models';
+import { AlignType } from '../../models/models';
 
 @Component({
   selector: 'actionbar',
@@ -11,22 +12,26 @@ import { AlignType } from '../models/models';
 export class ActionbarComponent implements OnInit {
 
   //STORYBOOK CONFIG
-  @Input() actionbar: Actionbar;    
+  @Input() actionbar: Actionbar;
 
-  @Output() 
+  @Output()
   onClickAction = new EventEmitter<Event>();
+
+
+
+  constructor(
   
+  ) { }
+
   ngOnInit(): void {
-    
   }
-  
-  onClick(social : any) {
-    console.log(social);
+
+  onClick(social: any) {
     this.onClickAction.emit(social);
   }
 
   public get classes(): string[] {
     const mode = this.actionbar?.rounded ? 'actionbar--rounded' : 'actionbar--flat';
-    return [ `actionbar--${this.actionbar?.position}`, mode];
+    return [`actionbar--${this.actionbar?.position}`, mode];
   }
 }

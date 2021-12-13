@@ -1,8 +1,10 @@
+import { MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { action } from '@storybook/addon-actions';
 import { moduleMetadata } from '@storybook/angular';
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { ActionbarComponent } from '../app/actionbar/actionbar.component';
+import { ActionbarComponent } from '../app/component/actionbar/actionbar.component';
 import { Actionbar } from '../app/models/models'
+
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
@@ -12,21 +14,22 @@ export default {
   decorators: [
     moduleMetadata({
       declarations: [ActionbarComponent],
+      imports: [MatDialogModule],
     }),
   ],
   excludeStories: /.*Data$/,
 } as Meta;
 
 export const actionsData = {
-  onClickAction : action('onClickAction'),
+  onClickAction: action('onClickAction'),
 };
 
 // More on component templates: https://storybook.js.org/docs/angular/writing-stories/introduction#using-args
 const Template: Story<ActionbarComponent> = (args: ActionbarComponent) => ({
   props: {
     ...args,
-    onClickAction : actionsData.onClickAction,
-  }, 
+    onClickAction: actionsData.onClickAction,
+  },
 });
 
 // Con template.bind() possiamo prendere la definizione della funzione e reciclarla

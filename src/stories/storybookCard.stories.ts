@@ -1,12 +1,13 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { StorybookCardComponent } from '../app/storybook-card/storybook-card.component';
+import { StorybookCardComponent } from '../app/component/storybook-card/storybook-card.component';
 import { StorybookCard } from '../app/models/models'
-import { ActionbarComponent } from 'src/app/actionbar/actionbar.component';
+import { ActionbarComponent } from 'src/app/component/actionbar/actionbar.component';
 
 import actionbarStories, * as ActionbarStories from './actionbar.stories'
 import { componentWrapperDecorator, moduleMetadata } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
 import { action } from '@storybook/addon-actions';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
@@ -17,7 +18,10 @@ export default {
   decorators: [
     moduleMetadata({
       declarations: [StorybookCardComponent, ActionbarComponent],
-      imports: [CommonModule]
+      imports: [CommonModule],
+      providers: [
+        { provide: MAT_DIALOG_DATA, useValue: {} }
+      ]
     }),
     //👇 Wraps our stories with a decorator
     componentWrapperDecorator(story => `<div class="d-flex justify-content-center">${story}</div>`),
@@ -41,7 +45,7 @@ BaseCard.args = {
     card: {
       id: '0',
       title: 'Default Card',
-      imageSrc: '../../assets/Lunedi.jpg',
+      imageSrc: '../../../assets/Lunedi.jpg',
       altImageSrc: 'monday crying frog',
       type: 'medium-card',
     },
@@ -76,7 +80,7 @@ LargeImageCard.args = {
     card: {
       ...BaseCard.args.storybookcard.card,
       title: 'Large image card',
-      imageSrc: '../../assets/martedi.jpg',
+      imageSrc: '../../../assets/martedi.jpg',
       altImageSrc: 'Nice green guy',
       type: 'large-card',
     },
@@ -93,7 +97,7 @@ cardWithRightAction.args = {
     card: {
       ...BaseCard.args.storybookcard.card,
       title: 'Wow Right Action and flat button in a sigle Cards',
-      imageSrc: '../../assets/mercoledi.jpg',
+      imageSrc: '../../../assets/mercoledi.jpg',
       altImageSrc: 'TACOS CATS',
     },
     actionbar: {

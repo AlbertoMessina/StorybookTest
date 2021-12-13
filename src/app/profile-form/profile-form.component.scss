@@ -25,10 +25,15 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-.submit-btn {
-  background-color: rgb(111, 220, 99);
+.custom-btn {
+  background-color: rgb(180, 99, 220);
   border-radius: 1.1rem;
   padding: 5px 3px;
   margin-top: 1.2rem;
   font-weight: bold;
+}
+
+.submit {
+  background-color: rgb(111, 220, 99);
+  margin-right: 10px;
 }

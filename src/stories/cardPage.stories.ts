@@ -6,8 +6,9 @@ import { action } from '@storybook/addon-actions';
 
 import { SmallStorybookCard , LargeStorybookCard, MediumStorybookCard } from 'src/assets/data/card-mock';
 import { CardPageComponent } from 'src/app/card-page/card-page.component';
-import { StorybookCardComponent } from 'src/app/storybook-card/storybook-card.component';
-import { ActionbarComponent } from 'src/app/actionbar/actionbar.component';
+import { StorybookCardComponent } from 'src/app/component/storybook-card/storybook-card.component';
+import { ActionbarComponent } from 'src/app/component/actionbar/actionbar.component';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 
 export default {
@@ -16,7 +17,11 @@ export default {
         moduleMetadata({
             declarations: [CardPageComponent, StorybookCardComponent, ActionbarComponent],
             imports: [CommonModule],
+            providers: [
+                { provide: MAT_DIALOG_DATA, useValue: {} }
+              ]
         }),
+        
     ],
     excludeStories: /.*Data$/,
     title: 'Pages/cardPage',

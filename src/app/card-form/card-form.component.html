@@ -1,0 +1,22 @@
+<form [formGroup]="cardForm" (ngSubmit)="submit()">
+
+  <div class="row mt-4">
+    <div class="col-6">
+      <reactive-form-input [input_id]="title" [type]="text" label="Title" placeholder="My card"
+        [control]="cardForm.get('title')">
+      </reactive-form-input>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <label>Select card image:</label>
+    </div>
+    <div class="col-md-12 mt-2">
+      <input type="file" accept="image/*" (change)="imagePreview($event)" />
+    </div>
+  </div>
+  <div class="mt-4" *ngIf="filePath && filePath !== ''">
+    <img class="card-img-preview" [src]="filePath" [alt]="cardForm.value.title">
+  </div>
+  <button class="mt-3" type="submit">Upload</button>
+</form>

@@ -289,8 +289,8 @@
     "components": [
         {
             "name": "ActionbarComponent",
-            "id": "component-ActionbarComponent-76eafb9d136c5e3422b59eb1f7a6b0ea",
-            "file": "src/app/actionbar/actionbar.component.ts",
+            "id": "component-ActionbarComponent-9f26b96849f43b86ba7baacea39149e6",
+            "file": "src/app/component/actionbar/actionbar.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -310,7 +310,7 @@
                     "name": "actionbar",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 14,
+                    "line": 15,
                     "type": "Actionbar"
                 }
             ],
@@ -320,7 +320,7 @@
                     "defaultValue": "new EventEmitter<Event>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 17,
+                    "line": 18,
                     "type": "EventEmitter"
                 }
             ],
@@ -332,7 +332,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 19,
+                    "line": 26,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -349,7 +349,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 23,
+                    "line": 29,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -372,7 +372,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\n\nimport { Actionbar } from '../models/models';\nimport { AlignType } from '../models/models';\n\n@Component({\n  selector: 'actionbar',\n  templateUrl: './actionbar.component.html',\n  styleUrls: ['./actionbar.component.scss']\n})\nexport class ActionbarComponent implements OnInit {\n\n  //STORYBOOK CONFIG\n  @Input() actionbar: Actionbar;    \n\n  @Output() \n  onClickAction = new EventEmitter<Event>();\n  \n  ngOnInit(): void {\n    \n  }\n  \n  onClick(social : any) {\n    console.log(social);\n    this.onClickAction.emit(social);\n  }\n\n  public get classes(): string[] {\n    const mode = this.actionbar?.rounded ? 'actionbar--rounded' : 'actionbar--flat';\n    return [ `actionbar--${this.actionbar?.position}`, mode];\n  }\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Inject, Input, OnInit, Output } from '@angular/core';\nimport { MAT_DIALOG_DATA } from '@angular/material/dialog';\n\nimport { Actionbar } from '../../models/models';\nimport { AlignType } from '../../models/models';\n\n@Component({\n  selector: 'actionbar',\n  templateUrl: './actionbar.component.html',\n  styleUrls: ['./actionbar.component.scss']\n})\nexport class ActionbarComponent implements OnInit {\n\n  //STORYBOOK CONFIG\n  @Input() actionbar: Actionbar;\n\n  @Output()\n  onClickAction = new EventEmitter<Event>();\n\n\n\n  constructor(\n  \n  ) { }\n\n  ngOnInit(): void {\n  }\n\n  onClick(social: any) {\n    this.onClickAction.emit(social);\n  }\n\n  public get classes(): string[] {\n    const mode = this.actionbar?.rounded ? 'actionbar--rounded' : 'actionbar--flat';\n    return [`actionbar--${this.actionbar?.position}`, mode];\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -381,6 +381,14 @@
                 }
             ],
             "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 18
+            },
             "implements": [
                 "OnInit"
             ],
@@ -391,11 +399,11 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 28
+                        "line": 33
                     }
                 }
             },
-            "templateData": "<div class=\"action-container\" [ngClass]=\"classes\">\n        <div class=\"link-container\" *ngIf='actionbar.type == \"social\"'>\n                <a class=\"social-svg\" (click)=\"onClick('facebook')\"><img class=\"svg\"\n                                src=\"../../assets/5365678_fb_facebook_facebook logo_icon.svg\" alt=\"facebook logo\"></a>\n                <a class=\"social-svg\" (click)=\"onClick('tumblr')\"><img class=\"svg\"\n                                src=\"../../assets/5296511_network_social network_tumblr_tumblr logo_icon.svg\"\n                                alt=\"tumblr logo\"></a>\n                <a class=\"social-svg\" (click)=\"onClick('linkedin')\"><img class=\"svg\"\n                                src=\"../../assets/5296501_linkedin_network_linkedin logo_icon.svg\"\n                                alt=\"linkedin logo\"></a>\n        </div>\n        <div class=\"link-container\" *ngIf='actionbar.type == \"cart\"'>\n                <a class=\"social-svg\" (click)=\"onClick('cart')\"><img class=\"svg\" src=\"../../assets/shopping-cart.png\"></a>\n                <a class=\"social-svg\" (click)=\"onClick('bin')\"><img class=\"svg\" src=\"../../assets/bin.png\" alt=\"tumblr logo\"></a>\n        </div>\n</div>"
+            "templateData": "<div class=\"action-container\" [ngClass]=\"classes\">\n        <div class=\"link-container\" *ngIf='actionbar.type == \"social\"'>\n                <a class=\"social-svg\" (click)=\"onClick('facebook')\"><img class=\"svg\"\n                                src=\"../../../assets/5365678_fb_facebook_facebook logo_icon.svg\" alt=\"facebook logo\"></a>\n                <a class=\"social-svg\" (click)=\"onClick('tumblr')\"><img class=\"svg\"\n                                src=\"../../../assets/5296511_network_social network_tumblr_tumblr logo_icon.svg\"\n                                alt=\"tumblr logo\"></a>\n                <a class=\"social-svg\" (click)=\"onClick('linkedin')\"><img class=\"svg\"\n                                src=\"../../../assets/5296501_linkedin_network_linkedin logo_icon.svg\"\n                                alt=\"linkedin logo\"></a>\n        </div>\n        <div class=\"link-container\" *ngIf='actionbar.type == \"cart\"'>\n                <a class=\"social-svg\" (click)=\"onClick('cart')\"><img class=\"svg\" src=\"../../../assets/shopping-cart.png\"></a>\n                <a class=\"social-svg\" (click)=\"onClick('bin')\"><img class=\"svg\" src=\"../../../assets/bin.png\" alt=\"tumblr logo\"></a>\n        </div>\n</div>\n"
         },
         {
             "name": "AppComponent",
@@ -449,8 +457,181 @@
             "templateData": "\n<div class=\"d-flex justify-content-center\">\n    <h2>GOODMORNING THIS IS A TEST</h2>\n</div>\n<app-card-page></app-card-page>\n<router-outlet></router-outlet>\n"
         },
         {
+            "name": "CardFormComponent",
+            "id": "component-CardFormComponent-edb9eb2f2bf3dd32c3a9b448770ab510",
+            "file": "src/app/card-form/card-form.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-card-form",
+            "styleUrls": [
+                "./card-form.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./card-form.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "cardForm",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "FormGroup",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                },
+                {
+                    "name": "fb",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "FormBuilder",
+                    "optional": false,
+                    "description": "",
+                    "line": 22,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "filePath",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                },
+                {
+                    "name": "storybookcard",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StorybookCard",
+                    "optional": false,
+                    "description": "",
+                    "line": 19
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "imagePreview",
+                    "args": [
+                        {
+                            "name": "e",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 33,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "e",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 31,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "submit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 50,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { FormBuilder, FormGroup } from \"@angular/forms\";\nimport { MatDialog } from '@angular/material/dialog';\nimport { StorybookCard } from '../models/models';\nimport { StorybookCardComponent } from '../component/storybook-card/storybook-card.component';\n\n\n@Component({\n  selector: 'app-card-form',\n  templateUrl: './card-form.component.html',\n  styleUrls: ['./card-form.component.scss']\n})\n\nexport class CardFormComponent implements OnInit {\n\n  filePath: string;\n  cardForm: FormGroup;\n\n  storybookcard: StorybookCard;\n\n  constructor(\n    public fb: FormBuilder,\n    private _dialog: MatDialog) {\n\n    this.cardForm = this.fb.group({\n      img: [null],\n      title: ['']\n    })\n  }\n\n  ngOnInit(): void { }\n\n  imagePreview(e: any) {\n    const file = (e.target as HTMLInputElement).files[0];\n\n    this.cardForm.patchValue({\n      img: file\n    });\n\n    this.cardForm.get('img').updateValueAndValidity()\n\n    const reader = new FileReader();\n    reader.onload = () => {\n      this.filePath = reader.result as string;\n      console.log(this.filePath);\n    }\n    reader.readAsDataURL(file)\n  }\n\n  submit() {\n\n\n    this.storybookcard = {\n      card: {\n        id: '0',\n        title: this.cardForm.get('title').value,\n        altImageSrc: this.cardForm.get('title').value,\n        type: \"medium-card\"\n      },\n      actionbar: {\n        position: 'center',\n        rounded: false,\n        type: 'cart'\n      }\n    }\n\n    console.log(this.storybookcard);\n\n    let dialogRef = this._dialog.open(StorybookCardComponent, {\n      data: {\n        set: true,\n        storybookcard: this.storybookcard,\n        file: this.cardForm.get('img').value\n      },\n      maxWidth: '600px',\n    });\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".card-img-preview {\n\n    width: 400px;\n    height: 300px;\n\n}\n\nmat-card{\n    width: 350px;\n    height: 400px;\n    display: block;\n    margin-left:auto;\n    margin-right:auto; \n}\n\n",
+                    "styleUrl": "./card-form.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "fb",
+                        "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "_dialog",
+                        "type": "MatDialog",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 19,
+                "jsdoctags": [
+                    {
+                        "name": "fb",
+                        "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "_dialog",
+                        "type": "MatDialog",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<form [formGroup]=\"cardForm\" (ngSubmit)=\"submit()\">\n\n  <div class=\"row mt-4\">\n    <div class=\"col-6\">\n      <reactive-form-input [input_id]=\"title\" [type]=\"text\" label=\"Title\" placeholder=\"My card\"\n        [control]=\"cardForm.get('title')\">\n      </reactive-form-input>\n    </div>\n  </div>\n  <div class=\"row mt-5\">\n    <div class=\"col-md-12\">\n      <label>Select card image:</label>\n    </div>\n    <div class=\"col-md-12 mt-2\">\n      <input type=\"file\" accept=\"image/*\" (change)=\"imagePreview($event)\" />\n    </div>\n  </div>\n  <div class=\"mt-4\" *ngIf=\"filePath && filePath !== ''\">\n    <img class=\"card-img-preview\" [src]=\"filePath\" [alt]=\"cardForm.value.title\">\n  </div>\n  <button class=\"mt-3\" type=\"submit\">Upload</button>\n</form>"
+        },
+        {
             "name": "CardPageComponent",
-            "id": "component-CardPageComponent-fb4d7ce200c279b481f2a64609a6f24f",
+            "id": "component-CardPageComponent-ab7e95474f155d90690b465a32892ef7",
             "file": "src/app/card-page/card-page.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -534,7 +715,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { CardService } from '../service/card.service';\nimport { StorybookCardComponent } from '../storybook-card/storybook-card.component';\nimport { ActionbarComponent } from '../actionbar/actionbar.component';\n\n@Component({\n  selector: 'app-card-page',\n  templateUrl: './card-page.component.html',\n  styleUrls: ['./card-page.component.scss']\n})\nexport class CardPageComponent implements OnInit {\n\n  @Input() state: string = 'medium';\n\n  @Input()\n  storybookcards: any;\n\n\n  constructor(\n    private cardService: CardService\n  ) { }\n\n  ngOnInit(): void {\n  if(this.state =='small') {\n    this.getSmallCard();\n  }\n  if(this.state =='large') {\n    this.getLargeCard();\n  }\n\n  if(this.state =='medium') {\n    this.getMediumCard();\n  }\n  \n  console.log(this.storybookcards);\n  \n  }\n\n  getSmallCard() {\n    const card = this.cardService.getSmallCard().subscribe(\n      data => this.storybookcards = data\n    );\n  }\n\n  getMediumCard() {\n    const card = this.cardService.getMediumCard().subscribe(\n      data => this.storybookcards = data\n    );\n  }\n\n  getLargeCard() {\n    const card = this.cardService.getLargeCard().subscribe(\n      data => this.storybookcards = data\n    );\n  }\n}\n",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { CardService } from '../service/card.service';\nimport { StorybookCardComponent } from '../component/storybook-card/storybook-card.component';\nimport { ActionbarComponent } from '../component/actionbar/actionbar.component';\n\n@Component({\n  selector: 'app-card-page',\n  templateUrl: './card-page.component.html',\n  styleUrls: ['./card-page.component.scss']\n})\nexport class CardPageComponent implements OnInit {\n\n  @Input() state: string = 'medium';\n\n  @Input()\n  storybookcards: any;\n\n\n  constructor(\n    private cardService: CardService\n  ) { }\n\n  ngOnInit(): void {\n  if(this.state =='small') {\n    this.getSmallCard();\n  }\n  if(this.state =='large') {\n    this.getLargeCard();\n  }\n\n  if(this.state =='medium') {\n    this.getMediumCard();\n  }\n  \n  console.log(this.storybookcards);\n  \n  }\n\n  getSmallCard() {\n    const card = this.cardService.getSmallCard().subscribe(\n      data => this.storybookcards = data\n    );\n  }\n\n  getMediumCard() {\n    const card = this.cardService.getMediumCard().subscribe(\n      data => this.storybookcards = data\n    );\n  }\n\n  getLargeCard() {\n    const card = this.cardService.getLargeCard().subscribe(\n      data => this.storybookcards = data\n    );\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -576,7 +757,7 @@
         },
         {
             "name": "ProfileFormComponent",
-            "id": "component-ProfileFormComponent-47f809b887d66bd6f143f764a33258b8",
+            "id": "component-ProfileFormComponent-97920a794cb53e221ea0358766118e8c",
             "file": "src/app/profile-form/profile-form.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -602,7 +783,7 @@
                     "type": "FormGroup",
                     "optional": false,
                     "description": "",
-                    "line": 11
+                    "line": 12
                 }
             ],
             "methodsClass": [
@@ -612,7 +793,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 16,
+                    "line": 20,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -622,7 +803,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 31,
+                    "line": 34,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -634,11 +815,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { FormBuilder, FormGroup, PatternValidator, Validators } from '@angular/forms';\n\n@Component({\n  selector: 'app-profile-form',\n  templateUrl: './profile-form.component.html',\n  styleUrls: ['./profile-form.component.scss']\n})\nexport class ProfileFormComponent implements OnInit {\n\n  profileForm : FormGroup;\n\n\n  constructor( private _fb : FormBuilder) { }\n\n  ngOnInit(): void {\n\n    this.profileForm = this._fb.group({\n      name : ['', Validators.required ],\n   /*   surname : ['', Validators.required],\n      city : ['', Validators.required],\n      state : ['', [Validators.required]],\n      zip : ['', [Validators.required, Validators.pattern(new RegExp('\\d{5}'))]]\n    */\n    });\n\n  }\n \n  get profileControls() { return this.profileForm.controls; }\n\n  onSubmit(){\n    console.log(this.profileForm.valid);\n    if(!this.profileForm.valid){\n      alert('nope');     \n      return;\n    }\n    alert(this.profileForm);\n    console.log(this.profileForm.value);\n  }\n\n}\n",
+            "sourceCode": "import { Component, Input, EventEmitter, OnInit, Output } from '@angular/core';\nimport { FormBuilder, FormGroup, PatternValidator, Validators } from '@angular/forms';\nimport { MatDialog } from '@angular/material/dialog';\nimport { ActionbarComponent } from '../component/actionbar/actionbar.component';\n@Component({\n  selector: 'app-profile-form',\n  templateUrl: './profile-form.component.html',\n  styleUrls: ['./profile-form.component.scss']\n})\nexport class ProfileFormComponent implements OnInit {\n\n  profileForm: FormGroup;\n\n\n  constructor(\n    private _fb: FormBuilder,\n    private _dialog: MatDialog\n  ) { }\n\n  ngOnInit(): void {\n\n    this.profileForm = this._fb.group({\n      name: ['', Validators.required],\n      surname: ['', Validators.required],\n      city: ['', Validators.required],\n      state: ['', [Validators.required]],\n      zip: ['', [Validators.required]]\n    });\n\n  }\n\n  get profileControls() { return this.profileForm.controls; }\n\n  onSubmit() {\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".input-container {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n\n    input {\n      border-radius: 15px;\n      padding: 5px 10px;\n      margin-top: 5px;\n    }\n}\n\n.input-row-container {\n  margin-top: 1.2rem;\n}\n/* Chrome, Safari, Edge, Opera */\ninput::-webkit-outer-spin-button,\ninput::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0;\n}\n\n/* Firefox */\ninput[type=number] {\n  -moz-appearance: textfield;\n}\n\n.submit-btn {\n  background-color: rgb(111, 220, 99);\n  border-radius: 1.1rem;\n  padding: 5px 3px;\n  margin-top: 1.2rem;\n  font-weight: bold;\n}",
+                    "data": ".input-container {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n\n    input {\n      border-radius: 15px;\n      padding: 5px 10px;\n      margin-top: 5px;\n    }\n}\n\n.input-row-container {\n  margin-top: 1.2rem;\n}\n/* Chrome, Safari, Edge, Opera */\ninput::-webkit-outer-spin-button,\ninput::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0;\n}\n\n/* Firefox */\ninput[type=number] {\n  -moz-appearance: textfield;\n}\n\n.custom-btn {\n  background-color: rgb(180, 99, 220);\n  border-radius: 1.1rem;\n  padding: 5px 3px;\n  margin-top: 1.2rem;\n  font-weight: bold;\n}\n\n.submit {\n  background-color: rgb(111, 220, 99);\n  margin-right: 10px;\n}\n",
                     "styleUrl": "./profile-form.component.scss"
                 }
             ],
@@ -654,13 +835,28 @@
                         "type": "FormBuilder",
                         "deprecated": false,
                         "deprecationMessage": ""
+                    },
+                    {
+                        "name": "_dialog",
+                        "type": "MatDialog",
+                        "deprecated": false,
+                        "deprecationMessage": ""
                     }
                 ],
-                "line": 11,
+                "line": 12,
                 "jsdoctags": [
                     {
                         "name": "_fb",
                         "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "_dialog",
+                        "type": "MatDialog",
                         "deprecated": false,
                         "deprecationMessage": "",
                         "tagName": {
@@ -679,22 +875,22 @@
                         "name": "profileControls",
                         "type": "",
                         "returnType": "",
-                        "line": 29
+                        "line": 32
                     }
                 }
             },
-            "templateData": "<h2>Profile</h2>\n<form [formGroup]='profileForm' (ngSubmit)=\"onSubmit()\">\n  <div class=\"row input-row-container\">\n    <div class=\"col-md-6 input-container\">\n      <label for=\"name\">Name: </label>\n      <input id=\"name\" type=\"text\" formControlName=\"name\">\n    </div>\n   <!--\n    <div class=\"col-md-6 input-container\">\n      <label for=\"surname\">Surname: </label>\n      <input id=\"surname\" type=\"text\" formControlName=\"surname\">\n    </div>\n    -->\n  </div>\n  <!--\n  <div class=\"row input-row-container\">\n    <div class=\"col-md-4 input-container\">\n      <label for=\"city\">City: </label>\n      <input id=\"city\" type=\"text\" formControlName=\"city\">\n    </div>\n    <div class=\"col-md-4 input-container\">\n      <label for=\"state\">State: </label>\n      <input id=\"state\" type=\"text\" formControlName=\"state\">\n    </div>\n    <div class=\"col-md-4 input-container\">\n      <label for=\"zip\">Zip Code: </label>\n      <input id=\"zip\" type=\"text\" formControlName=\"zip\">\n    </div>\n  </div>\n  -->\n  <button class=\"submit-btn\" type=\"submit\">BottoneDiSalva</button>\n</form>\n<pre>\n  {{profileForm.valid}}\n  {{profileForm.value | json}}\n</pre>"
+            "templateData": "<h2>Profile</h2>\n<form [formGroup]='profileForm' (ngSubmit)=\"onSubmit()\">\n  <div class=\"row input-row-container\">\n    <div class=\"col-md-4\">\n      <reactive-form-input [input_id]=\"name\" [type]=\"text\" label=\"First name\" placeholder=\"Insert first name\" [control]=\"profileForm.get('name')\">\n      </reactive-form-input>\n    </div>\n    <div class=\"col-md-4\">\n      <reactive-form-input [input_id]=\"surname\" [type]=\"text\" label=\"Second name\" placeholder=\"Insert second name\"\n        [control]=\"profileForm.get('surname')\">\n      </reactive-form-input>\n    </div>\n  </div>\n\n  <div class=\"row input-row-container\">\n    <div class=\"col-md-4\">\n      <reactive-form-input [input_id]=\"city\" [type]=\"text\" label=\"City\" placeholder=\"City\" [control]=\"profileForm.get('city')\"> \n      </reactive-form-input>\n    </div>\n    <div class=\"col-md-4\">\n      <reactive-form-input [input_id]=\"state\" [type]=\"text\" label=\"State\" placeholder=\"State\" [control]=\"profileForm.get('state')\">\n      </reactive-form-input>\n    </div>\n    <div class=\"col-md-4\">\n      <reactive-form-input [input_id]=\"zip\" [type]=\"text\" label=\"zip\" placeholder=\"Zip code\" [control]=\"profileForm.get('zip')\">\n      </reactive-form-input>\n    </div>\n  </div>\n  <button [disabled]=\"!profileForm.valid\" class=\"custom-btn submit\" type=\"submit\">BottoneDiSalva</button>\n</form>\n"
         },
         {
             "name": "ReactiveFormInputComponent",
-            "id": "component-ReactiveFormInputComponent-ed89edb78f1cb38ebcf5d39c7ce4515d",
+            "id": "component-ReactiveFormInputComponent-26e2186230b5e3f8a88cfa6e70f28977",
             "file": "src/app/component/form/reactive-form-input/reactive-form-input.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-reactive-form-input",
+            "selector": "reactive-form-input",
             "styleUrls": [
                 "./reactive-form-input.component.scss"
             ],
@@ -708,7 +904,7 @@
                     "name": "control",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 14,
+                    "line": 19,
                     "type": "FormControl"
                 },
                 {
@@ -726,10 +922,17 @@
                     "type": "string"
                 },
                 {
+                    "name": "placeholder",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "string"
+                },
+                {
                     "name": "type",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 12,
+                    "line": 13,
                     "type": "string"
                 }
             ],
@@ -742,7 +945,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 18,
+                    "line": 22,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -754,11 +957,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { FormControl } from '@angular/forms';\n\n@Component({\n  selector: 'app-reactive-form-input',\n  templateUrl: './reactive-form-input.component.html',\n  styleUrls: ['./reactive-form-input.component.scss']\n})\nexport class ReactiveFormInputComponent implements OnInit {\n\n  @Input() input_id : string;\n  @Input() type : string;\n\n  @Input () control: FormControl;\n  @Input() label : string;\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { FormControl } from '@angular/forms';\n\n@Component({\n  selector: 'reactive-form-input',\n  templateUrl: './reactive-form-input.component.html',\n  styleUrls: ['./reactive-form-input.component.scss']\n})\nexport class ReactiveFormInputComponent implements OnInit {\n\n  @Input() input_id : string;\n  \n  @Input() type : string;\n\n  @Input() label : string;\n\n  @Input() placeholder? : string;\n\n  @Input () control?: FormControl;\n  constructor() { }\n\n  ngOnInit(): void {\n\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": ".input-container {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n\n    input {\n      border-radius: 15px;\n      padding: 5px 10px;\n      margin-top: 5px;\n    }\n}\n/* Chrome, Safari, Edge, Opera */\ninput::-webkit-outer-spin-button,\ninput::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0;\n}\n\n/* Firefox */\ninput[type=number] {\n  -moz-appearance: textfield;\n}\n\n.submit-btn {\n  background-color: rgb(111, 220, 99);\n  border-radius: 1.1rem;\n  padding: 5px 3px;\n  margin-top: 1.2rem;\n  font-weight: bold;\n}",
                     "styleUrl": "./reactive-form-input.component.scss"
                 }
             ],
@@ -769,17 +972,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 15
+                "line": 19
             },
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"input-container\">\n    <label for=\"{{input_id}}\">{{label}}: </label>\n    <input id=\"{{input_id}}\" type=\"{{type}}\" [formControl]=\"control\">\n</div>"
+            "templateData": "<div class=\"input-container\">\n    <label for=\"{{input_id}}\">{{label}}: </label>\n    <input id=\"{{input_id}}\" type=\"{{type}}\" [formControl]=\"control\" placeholder=\"{{placeholder}}\">\n</div>"
         },
         {
             "name": "StorybookCardComponent",
-            "id": "component-StorybookCardComponent-f42511f59d31c7a551f489fe6f7c1adb",
-            "file": "src/app/storybook-card/storybook-card.component.ts",
+            "id": "component-StorybookCardComponent-adb2a18142f2c2db8cc396c1450af2ed",
+            "file": "src/app/component/storybook-card/storybook-card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -799,7 +1002,7 @@
                     "name": "storybookcard",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 13,
+                    "line": 14,
                     "type": "StorybookCard"
                 }
             ],
@@ -809,7 +1012,7 @@
                     "defaultValue": "new EventEmitter<Event>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 16,
+                    "line": 17,
                     "type": "EventEmitter"
                 },
                 {
@@ -817,19 +1020,66 @@
                     "defaultValue": "new EventEmitter<Event>()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 19,
+                    "line": 20,
                     "type": "EventEmitter"
                 }
             ],
-            "propertiesClass": [],
+            "propertiesClass": [
+                {
+                    "name": "data",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 23,
+                    "decorators": [
+                        {
+                            "name": "Inject",
+                            "stringifiedArguments": "MAT_DIALOG_DATA"
+                        }
+                    ],
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
             "methodsClass": [
+                {
+                    "name": "imagePreview",
+                    "args": [
+                        {
+                            "name": "e",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 41,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "e",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
                 {
                     "name": "ngOnInit",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 23,
+                    "line": 27,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -846,7 +1096,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 26,
+                    "line": 35,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -869,11 +1119,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\n\nimport { Actionbar, StorybookCard } from '../models/models'\n@Component({\n  selector: 'app-storybook-card',\n  templateUrl: './storybook-card.component.html',\n  styleUrls: ['./storybook-card.component.scss']\n})\nexport class StorybookCardComponent implements OnInit {\n\n  //child input\n\n  @Input() storybookcard: StorybookCard;\n\n  @Output()\n  onClickAction = new EventEmitter<Event>();\n\n  @Output()\n  openCardClick = new EventEmitter<Event>();\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  openCard(id : any) {\n    console.log('Hello there... General Kenoby');\n    this.openCardClick.emit(<any>'Hello there... General Kenoby' + id);\n  }\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Inject, Input, OnInit, Output } from '@angular/core';\nimport { MAT_DIALOG_DATA } from '@angular/material/dialog';\n\nimport { Actionbar, StorybookCard } from '../../models/models'\n@Component({\n  selector: 'app-storybook-card',\n  templateUrl: './storybook-card.component.html',\n  styleUrls: ['./storybook-card.component.scss']\n})\nexport class StorybookCardComponent implements OnInit {\n\n  //child input\n\n  @Input() storybookcard: StorybookCard;\n\n  @Output()\n  onClickAction = new EventEmitter<Event>();\n\n  @Output()\n  openCardClick = new EventEmitter<Event>();\n\n  constructor(\n    @Inject(MAT_DIALOG_DATA) public data: any) {\n\n  }\n\n  ngOnInit(): void {\n    if (this.data.set) {\n      console.log(this.data);\n      this.imagePreview(this.data.file);\n      this.storybookcard = this.data.storybookcard;\n    }\n  }\n\n  openCard(id: any) {\n    console.log('Hello there... General Kenoby');\n    this.openCardClick.emit(<any>'Hello there... General Kenoby' + id);\n  }\n\n\n  imagePreview(e: any) {\n    const file = e;\n    const reader = new FileReader();\n    reader.onload = () => {\n      this.storybookcard.card.imageSrc = reader.result as string;\n    }\n    reader.readAsDataURL(file)\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".card-header {\n    font-size: large;\n    font-weight: bold;\n}\n.card-body {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding-left: 0px;\n    padding-right: 0px;\n}\n.card {\n     box-shadow:3px 6px #88888887;      \n}\n\n.card-img {\n    margin:auto;\n    text-align: center;\n    width: 100%;\n    height: 90%;\n}\n\n.large-card {\n    width: 500px;\n    height: 500px;\n}\n\n.small-card {\n    width: 220px;\n    height: 250px;\n\n    .card-header {\n        white-space: nowrap;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        font-size: medium;\n    }\n\n    .card-img {\n\n        width: 95%;\n        \n    }\n}\n\n.medium-card {\n    width: 350px;\n    height: 400px;\n}\n",
+                    "data": ".card-header {\n    font-size: large;\n    color: black;\n    font-weight: bold;\n}\n.card-body {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding-left: 0px;\n    padding-right: 0px;\n}\n.card {\n     box-shadow:3px 6px #88888887;      \n}\n\n.card-img {\n    margin:auto;\n    text-align: center;\n    width: 100%;\n    height: 90%;\n}\n\n.large-card {\n    width: 500px;\n    height: 500px;\n}\n\n.small-card {\n    width: 220px;\n    height: 250px;\n\n    .card-header {\n        white-space: nowrap;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        font-size: medium;\n    }\n\n    .card-img {\n\n        width: 95%;\n        \n    }\n}\n\n.medium-card {\n    width: 350px;\n    height: 400px;\n}\n",
                     "styleUrl": "./storybook-card.component.scss"
                 }
             ],
@@ -883,8 +1133,26 @@
                 "description": "",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "args": [],
-                "line": 19
+                "args": [
+                    {
+                        "name": "data",
+                        "type": "any",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 20,
+                "jsdoctags": [
+                    {
+                        "name": "data",
+                        "type": "any",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
             },
             "implements": [
                 "OnInit"
@@ -1200,13 +1468,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-e7dd9be4150e72e6a43391aefb111b51",
+            "id": "module-AppModule-8148e99fc230d7d51ca2f95d26a8584f",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { TaskComponent } from './task/task.component';\nimport { TaskListComponent } from './task-list/task-list.component';\nimport { StorybookCardComponent } from './storybook-card/storybook-card.component';\nimport { ActionbarComponent } from './actionbar/actionbar.component';\nimport { ProfileFormComponent } from './profile-form/profile-form.component';\n\nimport { CardService } from './service/card.service';\nimport { CardPageComponent } from './card-page/card-page.component';\nimport { ReactiveFormInputComponent } from './component/form/reactive-form-input/reactive-form-input.component';\n@NgModule({\n  declarations: [\n    AppComponent,\n    TaskComponent,\n    TaskListComponent,\n    StorybookCardComponent,\n    ActionbarComponent,\n    ProfileFormComponent,\n    CardPageComponent,\n    ReactiveFormInputComponent\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule\n  ],\n  providers: [\n    CardService\n  ],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { MatDialogModule } from '@angular/material/dialog'\nimport { MatSliderModule } from '@angular/material/slider';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { TaskComponent } from './task/task.component';\nimport { TaskListComponent } from './task-list/task-list.component';\nimport { StorybookCardComponent } from './component/storybook-card/storybook-card.component';\nimport { ActionbarComponent } from './component/actionbar/actionbar.component';\nimport { ProfileFormComponent } from './profile-form/profile-form.component';\n\nimport { CardService } from './service/card.service';\nimport { CardPageComponent } from './card-page/card-page.component';\nimport { ReactiveFormInputComponent } from './component/form/reactive-form-input/reactive-form-input.component';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\nimport storybookCardStories from 'src/stories/storybookCard.stories';\n@NgModule({\n  declarations: [\n    AppComponent,\n    TaskComponent,\n    TaskListComponent,\n    StorybookCardComponent,\n    ActionbarComponent,\n    ProfileFormComponent,\n    CardPageComponent,\n    ReactiveFormInputComponent\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    BrowserAnimationsModule,\n    MatDialogModule,\n    MatSliderModule\n  ],\n  providers: [\n    CardService\n  ],\n  entryComponents: [\n    ProfileFormComponent,\n    ActionbarComponent,\n    StorybookCardComponent\n  ],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -1318,7 +1586,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\n  onClickAction : action('onClickAction'),\n}"
+                "defaultValue": "{\n  onClickAction: action('onClickAction'),\n}"
+            },
+            {
+                "name": "actionsData",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/cardForm.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n\n}"
             },
             {
                 "name": "actionsData",
@@ -1338,7 +1616,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\n\n}"
+                "defaultValue": "{\n   \n}"
             },
             {
                 "name": "actionsData",
@@ -1395,6 +1673,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/actionbar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/cardForm.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1508,7 +1796,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "StorybookCard[]",
-                "defaultValue": "[\n        {\n            'card': {\n                'id': '0',\n                'title': 'First Impact ',\n                'type': 'large-card',\n                'imageSrc': '../../assets/firstimpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': false,\n                'type': 'cart'\n            }\n        },\n\n        {\n            'card': {\n                'id': '1',\n                'title': 'Second Impact ',\n                'type': 'large-card',\n                'imageSrc': '../../assets/secondImpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': false,\n                'type': 'cart'\n            }\n        },\n        {\n            'card': {\n                'id': '2',\n                'title': 'Third Impact ',\n                'type': 'large-card',\n                'imageSrc': '../../assets/thirdImpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': false,\n                'type': 'cart'\n            }\n        },\n    ]"
+                "defaultValue": "[\n        {\n            'card': {\n                'id': '0',\n                'title': 'First Impact ',\n                'type': 'large-card',\n                'imageSrc': '../../../assets/firstimpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': false,\n                'type': 'cart'\n            }\n        },\n\n        {\n            'card': {\n                'id': '1',\n                'title': 'Second Impact ',\n                'type': 'large-card',\n                'imageSrc': '../../../assets/secondImpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': false,\n                'type': 'cart'\n            }\n        },\n        {\n            'card': {\n                'id': '2',\n                'title': 'Third Impact ',\n                'type': 'large-card',\n                'imageSrc': '../../../assets/thirdImpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': false,\n                'type': 'cart'\n            }\n        },\n    ]"
             },
             {
                 "name": "LargeStorybookCard",
@@ -1558,7 +1846,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "StorybookCard[]",
-                "defaultValue": "[\n        {\n            'card': {\n                'id': '0',\n                'title': 'First Impact ',\n                'type': 'medium-card',\n                'imageSrc': '../../assets/firstimpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'right',\n                'rounded': true,\n                'type': 'social'\n            }\n        },\n\n        {\n            'card': {\n                'id': '1',\n                'title': 'Second Impact ',\n                'type': 'medium-card',\n                'imageSrc': '../../assets/secondImpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': true,\n                'type': 'social'\n            }\n        },\n        {\n            'card': {\n                'id': '2',\n                'title': 'Third Impact ',\n                'type': 'medium-card',\n                'imageSrc': '../../assets/thirdImpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'left',\n                'rounded': true,\n                'type': 'social'\n            }\n        },\n    ]"
+                "defaultValue": "[\n        {\n            'card': {\n                'id': '0',\n                'title': 'First Impact ',\n                'type': 'medium-card',\n                'imageSrc': '../../../assets/firstimpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'right',\n                'rounded': true,\n                'type': 'social'\n            }\n        },\n\n        {\n            'card': {\n                'id': '1',\n                'title': 'Second Impact ',\n                'type': 'medium-card',\n                'imageSrc': '../../../assets/secondImpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': true,\n                'type': 'social'\n            }\n        },\n        {\n            'card': {\n                'id': '2',\n                'title': 'Third Impact ',\n                'type': 'medium-card',\n                'imageSrc': '../../../assets/thirdImpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'left',\n                'rounded': true,\n                'type': 'social'\n            }\n        },\n    ]"
             },
             {
                 "name": "MediumStorybookCard",
@@ -1575,6 +1863,26 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/storybookCard.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "NumericInput",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/reactiveFormInput.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "PasswordInput",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/reactiveFormInput.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1617,7 +1925,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "StorybookCard[]",
-                "defaultValue": "[\n        {\n            'card': {\n                'id': '0',\n                'title': 'First Impact ',\n                'type': 'small-card',\n                'imageSrc': '../../assets/firstimpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': false,\n                'type': 'cart'\n            }\n        },\n\n        {\n            'card': {\n                'id': '1',\n                'title': 'Second Impact ',\n                'type': 'small-card',\n                'imageSrc': '../../assets/secondImpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': false,\n                'type': 'cart'\n            }\n        },\n        {\n            'card': {\n                'id': '2',\n                'title': 'Third Impact ',\n                'type': 'small-card',\n                'imageSrc': '../../assets/thirdImpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': false,\n                'type': 'cart'\n            }\n        },\n    ]"
+                "defaultValue": "[\n        {\n            'card': {\n                'id': '0',\n                'title': 'First Impact ',\n                'type': 'small-card',\n                'imageSrc': '../../../assets/firstimpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': false,\n                'type': 'cart'\n            }\n        },\n\n        {\n            'card': {\n                'id': '1',\n                'title': 'Second Impact ',\n                'type': 'small-card',\n                'imageSrc': '../../../assets/secondImpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': false,\n                'type': 'cart'\n            }\n        },\n        {\n            'card': {\n                'id': '2',\n                'title': 'Third Impact ',\n                'type': 'small-card',\n                'imageSrc': '../../../assets/thirdImpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': false,\n                'type': 'cart'\n            }\n        },\n    ]"
             },
             {
                 "name": "SmallStorybookCard",
@@ -1637,7 +1945,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<ActionbarComponent>",
-                "defaultValue": "(args: ActionbarComponent) => ({\n  props: {\n    ...args,\n    onClickAction : actionsData.onClickAction,\n  }, \n})"
+                "defaultValue": "(args: ActionbarComponent) => ({\n  props: {\n    ...args,\n    onClickAction: actionsData.onClickAction,\n  },\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/cardForm.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<CardFormComponent>",
+                "defaultValue": "args => ({\n    props: {\n        ...args,\n    },\n})"
             },
             {
                 "name": "Template",
@@ -1657,7 +1975,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<ProfileFormComponent>",
-                "defaultValue": "args => ({\n    props: {\n        ...args,\n        // onPinTask: actionsData.onPinTask,\n\n    },\n})"
+                "defaultValue": "args => ({\n    props: {\n        ...args, \n    },\n})"
             },
             {
                 "name": "Template",
@@ -1757,7 +2075,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
-                    "defaultValue": "{\n  onClickAction : action('onClickAction'),\n}"
+                    "defaultValue": "{\n  onClickAction: action('onClickAction'),\n}"
                 },
                 {
                     "name": "Default",
@@ -1797,7 +2115,39 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<ActionbarComponent>",
-                    "defaultValue": "(args: ActionbarComponent) => ({\n  props: {\n    ...args,\n    onClickAction : actionsData.onClickAction,\n  }, \n})"
+                    "defaultValue": "(args: ActionbarComponent) => ({\n  props: {\n    ...args,\n    onClickAction: actionsData.onClickAction,\n  },\n})"
+                }
+            ],
+            "src/stories/cardForm.stories.ts": [
+                {
+                    "name": "actionsData",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/cardForm.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n\n}"
+                },
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/cardForm.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/cardForm.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<CardFormComponent>",
+                    "defaultValue": "args => ({\n    props: {\n        ...args,\n    },\n})"
                 }
             ],
             "src/stories/cardPage.stories.ts": [
@@ -1861,7 +2211,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
-                    "defaultValue": "{\n\n}"
+                    "defaultValue": "{\n   \n}"
                 },
                 {
                     "name": "Default",
@@ -1881,7 +2231,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<ProfileFormComponent>",
-                    "defaultValue": "args => ({\n    props: {\n        ...args,\n        // onPinTask: actionsData.onPinTask,\n\n    },\n})"
+                    "defaultValue": "args => ({\n    props: {\n        ...args, \n    },\n})"
                 }
             ],
             "src/stories/task.stories.ts": [
@@ -2021,6 +2371,26 @@
                     "defaultValue": "Template.bind({})"
                 },
                 {
+                    "name": "NumericInput",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/reactiveFormInput.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "PasswordInput",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/reactiveFormInput.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -2116,7 +2486,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "StorybookCard[]",
-                    "defaultValue": "[\n        {\n            'card': {\n                'id': '0',\n                'title': 'First Impact ',\n                'type': 'large-card',\n                'imageSrc': '../../assets/firstimpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': false,\n                'type': 'cart'\n            }\n        },\n\n        {\n            'card': {\n                'id': '1',\n                'title': 'Second Impact ',\n                'type': 'large-card',\n                'imageSrc': '../../assets/secondImpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': false,\n                'type': 'cart'\n            }\n        },\n        {\n            'card': {\n                'id': '2',\n                'title': 'Third Impact ',\n                'type': 'large-card',\n                'imageSrc': '../../assets/thirdImpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': false,\n                'type': 'cart'\n            }\n        },\n    ]"
+                    "defaultValue": "[\n        {\n            'card': {\n                'id': '0',\n                'title': 'First Impact ',\n                'type': 'large-card',\n                'imageSrc': '../../../assets/firstimpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': false,\n                'type': 'cart'\n            }\n        },\n\n        {\n            'card': {\n                'id': '1',\n                'title': 'Second Impact ',\n                'type': 'large-card',\n                'imageSrc': '../../../assets/secondImpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': false,\n                'type': 'cart'\n            }\n        },\n        {\n            'card': {\n                'id': '2',\n                'title': 'Third Impact ',\n                'type': 'large-card',\n                'imageSrc': '../../../assets/thirdImpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': false,\n                'type': 'cart'\n            }\n        },\n    ]"
                 },
                 {
                     "name": "MediumStorybookCard",
@@ -2126,7 +2496,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "StorybookCard[]",
-                    "defaultValue": "[\n        {\n            'card': {\n                'id': '0',\n                'title': 'First Impact ',\n                'type': 'medium-card',\n                'imageSrc': '../../assets/firstimpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'right',\n                'rounded': true,\n                'type': 'social'\n            }\n        },\n\n        {\n            'card': {\n                'id': '1',\n                'title': 'Second Impact ',\n                'type': 'medium-card',\n                'imageSrc': '../../assets/secondImpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': true,\n                'type': 'social'\n            }\n        },\n        {\n            'card': {\n                'id': '2',\n                'title': 'Third Impact ',\n                'type': 'medium-card',\n                'imageSrc': '../../assets/thirdImpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'left',\n                'rounded': true,\n                'type': 'social'\n            }\n        },\n    ]"
+                    "defaultValue": "[\n        {\n            'card': {\n                'id': '0',\n                'title': 'First Impact ',\n                'type': 'medium-card',\n                'imageSrc': '../../../assets/firstimpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'right',\n                'rounded': true,\n                'type': 'social'\n            }\n        },\n\n        {\n            'card': {\n                'id': '1',\n                'title': 'Second Impact ',\n                'type': 'medium-card',\n                'imageSrc': '../../../assets/secondImpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': true,\n                'type': 'social'\n            }\n        },\n        {\n            'card': {\n                'id': '2',\n                'title': 'Third Impact ',\n                'type': 'medium-card',\n                'imageSrc': '../../../assets/thirdImpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'left',\n                'rounded': true,\n                'type': 'social'\n            }\n        },\n    ]"
                 },
                 {
                     "name": "SmallStorybookCard",
@@ -2136,7 +2506,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "StorybookCard[]",
-                    "defaultValue": "[\n        {\n            'card': {\n                'id': '0',\n                'title': 'First Impact ',\n                'type': 'small-card',\n                'imageSrc': '../../assets/firstimpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': false,\n                'type': 'cart'\n            }\n        },\n\n        {\n            'card': {\n                'id': '1',\n                'title': 'Second Impact ',\n                'type': 'small-card',\n                'imageSrc': '../../assets/secondImpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': false,\n                'type': 'cart'\n            }\n        },\n        {\n            'card': {\n                'id': '2',\n                'title': 'Third Impact ',\n                'type': 'small-card',\n                'imageSrc': '../../assets/thirdImpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': false,\n                'type': 'cart'\n            }\n        },\n    ]"
+                    "defaultValue": "[\n        {\n            'card': {\n                'id': '0',\n                'title': 'First Impact ',\n                'type': 'small-card',\n                'imageSrc': '../../../assets/firstimpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': false,\n                'type': 'cart'\n            }\n        },\n\n        {\n            'card': {\n                'id': '1',\n                'title': 'Second Impact ',\n                'type': 'small-card',\n                'imageSrc': '../../../assets/secondImpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': false,\n                'type': 'cart'\n            }\n        },\n        {\n            'card': {\n                'id': '2',\n                'title': 'Third Impact ',\n                'type': 'small-card',\n                'imageSrc': '../../../assets/thirdImpact.jpeg',\n                'altImageSrc': 'First Impact',\n            },\n            'actionbar': {\n                'position': 'center',\n                'rounded': false,\n                'type': 'cart'\n            }\n        },\n    ]"
                 }
             ],
             "storybook-static/assets/data/card-mock.ts": [
@@ -2231,21 +2601,21 @@
         "status": "low",
         "files": [
             {
-                "filePath": "src/app/actionbar/actionbar.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "ActionbarComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/5",
-                "status": "low"
-            },
-            {
                 "filePath": "src/app/app.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "AppComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/card-form/card-form.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CardFormComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/9",
                 "status": "low"
             },
             {
@@ -2258,12 +2628,30 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/component/actionbar/actionbar.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ActionbarComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/component/form/reactive-form-input/reactive-form-input.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "ReactiveFormInputComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/7",
+                "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/component/storybook-card/storybook-card.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "StorybookCardComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/9",
                 "status": "low"
             },
             {
@@ -2327,15 +2715,6 @@
                 "name": "CardService",
                 "coveragePercent": 0,
                 "coverageCount": "0/5",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/storybook-card/storybook-card.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "StorybookCardComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/7",
                 "status": "low"
             },
             {
@@ -2457,6 +2836,36 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/cardForm.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "actionsData",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/cardForm.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/cardForm.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/cardPage.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2542,6 +2951,26 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/reactiveFormInput.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "NumericInput",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/reactiveFormInput.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "PasswordInput",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

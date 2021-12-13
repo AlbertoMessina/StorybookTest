@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CardService } from '../service/card.service';
-import { StorybookCardComponent } from '../storybook-card/storybook-card.component';
-import { ActionbarComponent } from '../actionbar/actionbar.component';
+import { StorybookCardComponent } from '../component/storybook-card/storybook-card.component';
+import { ActionbarComponent } from '../component/actionbar/actionbar.component';
 
 @Component({
   selector: 'app-card-page',

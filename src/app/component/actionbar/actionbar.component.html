@@ -1,0 +1,16 @@
+<div class="action-container" [ngClass]="classes">
+        <div class="link-container" *ngIf='actionbar.type == "social"'>
+                <a class="social-svg" (click)="onClick('facebook')"><img class="svg"
+                                src="../../../assets/5365678_fb_facebook_facebook logo_icon.svg" alt="facebook logo"></a>
+                <a class="social-svg" (click)="onClick('tumblr')"><img class="svg"
+                                src="../../../assets/5296511_network_social network_tumblr_tumblr logo_icon.svg"
+                                alt="tumblr logo"></a>
+                <a class="social-svg" (click)="onClick('linkedin')"><img class="svg"
+                                src="../../../assets/5296501_linkedin_network_linkedin logo_icon.svg"
+                                alt="linkedin logo"></a>
+        </div>
+        <div class="link-container" *ngIf='actionbar.type == "cart"'>
+                <a class="social-svg" (click)="onClick('cart')"><img class="svg" src="../../../assets/shopping-cart.png"></a>
+                <a class="social-svg" (click)="onClick('bin')"><img class="svg" src="../../../assets/bin.png" alt="tumblr logo"></a>
+        </div>
+</div>

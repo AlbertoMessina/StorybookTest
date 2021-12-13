@@ -7,7 +7,7 @@ export const SmallStorybookCard: StorybookCard[] =
                 'id': '0',
                 'title': 'First Impact ',
                 'type': 'small-card',
-                'imageSrc': '../../assets/firstimpact.jpeg',
+                'imageSrc': '../../../assets/firstimpact.jpeg',
                 'altImageSrc': 'First Impact',
             },
             'actionbar': {
@@ -22,7 +22,7 @@ export const SmallStorybookCard: StorybookCard[] =
                 'id': '1',
                 'title': 'Second Impact ',
                 'type': 'small-card',
-                'imageSrc': '../../assets/secondImpact.jpeg',
+                'imageSrc': '../../../assets/secondImpact.jpeg',
                 'altImageSrc': 'First Impact',
             },
             'actionbar': {
@@ -36,7 +36,7 @@ export const SmallStorybookCard: StorybookCard[] =
                 'id': '2',
                 'title': 'Third Impact ',
                 'type': 'small-card',
-                'imageSrc': '../../assets/thirdImpact.jpeg',
+                'imageSrc': '../../../assets/thirdImpact.jpeg',
                 'altImageSrc': 'First Impact',
             },
             'actionbar': {
@@ -54,7 +54,7 @@ export const MediumStorybookCard: StorybookCard[] =
                 'id': '0',
                 'title': 'First Impact ',
                 'type': 'medium-card',
-                'imageSrc': '../../assets/firstimpact.jpeg',
+                'imageSrc': '../../../assets/firstimpact.jpeg',
                 'altImageSrc': 'First Impact',
             },
             'actionbar': {
@@ -69,7 +69,7 @@ export const MediumStorybookCard: StorybookCard[] =
                 'id': '1',
                 'title': 'Second Impact ',
                 'type': 'medium-card',
-                'imageSrc': '../../assets/secondImpact.jpeg',
+                'imageSrc': '../../../assets/secondImpact.jpeg',
                 'altImageSrc': 'First Impact',
             },
             'actionbar': {
@@ -83,7 +83,7 @@ export const MediumStorybookCard: StorybookCard[] =
                 'id': '2',
                 'title': 'Third Impact ',
                 'type': 'medium-card',
-                'imageSrc': '../../assets/thirdImpact.jpeg',
+                'imageSrc': '../../../assets/thirdImpact.jpeg',
                 'altImageSrc': 'First Impact',
             },
             'actionbar': {
@@ -101,7 +101,7 @@ export const LargeStorybookCard: StorybookCard[] =
                 'id': '0',
                 'title': 'First Impact ',
                 'type': 'large-card',
-                'imageSrc': '../../assets/firstimpact.jpeg',
+                'imageSrc': '../../../assets/firstimpact.jpeg',
                 'altImageSrc': 'First Impact',
             },
             'actionbar': {
@@ -116,7 +116,7 @@ export const LargeStorybookCard: StorybookCard[] =
                 'id': '1',
                 'title': 'Second Impact ',
                 'type': 'large-card',
-                'imageSrc': '../../assets/secondImpact.jpeg',
+                'imageSrc': '../../../assets/secondImpact.jpeg',
                 'altImageSrc': 'First Impact',
             },
             'actionbar': {
@@ -130,7 +130,7 @@ export const LargeStorybookCard: StorybookCard[] =
                 'id': '2',
                 'title': 'Third Impact ',
                 'type': 'large-card',
-                'imageSrc': '../../assets/thirdImpact.jpeg',
+                'imageSrc': '../../../assets/thirdImpact.jpeg',
                 'altImageSrc': 'First Impact',
             },
             'actionbar': {
