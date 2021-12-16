@@ -458,7 +458,7 @@
         },
         {
             "name": "CardFormComponent",
-            "id": "component-CardFormComponent-edb9eb2f2bf3dd32c3a9b448770ab510",
+            "id": "component-CardFormComponent-7f53980769b8bf61aaa03b00f7ec9978",
             "file": "src/app/card-form/card-form.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -493,7 +493,7 @@
                     "type": "FormBuilder",
                     "optional": false,
                     "description": "",
-                    "line": 22,
+                    "line": 23,
                     "modifierKind": [
                         123
                     ]
@@ -515,6 +515,16 @@
                     "optional": false,
                     "description": "",
                     "line": 19
+                },
+                {
+                    "name": "submitted",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 20
                 }
             ],
             "methodsClass": [
@@ -531,7 +541,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 33,
+                    "line": 36,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -552,7 +562,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 31,
+                    "line": 32,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -562,7 +572,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 50,
+                    "line": 53,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -574,11 +584,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { FormBuilder, FormGroup } from \"@angular/forms\";\nimport { MatDialog } from '@angular/material/dialog';\nimport { StorybookCard } from '../models/models';\nimport { StorybookCardComponent } from '../component/storybook-card/storybook-card.component';\n\n\n@Component({\n  selector: 'app-card-form',\n  templateUrl: './card-form.component.html',\n  styleUrls: ['./card-form.component.scss']\n})\n\nexport class CardFormComponent implements OnInit {\n\n  filePath: string;\n  cardForm: FormGroup;\n\n  storybookcard: StorybookCard;\n\n  constructor(\n    public fb: FormBuilder,\n    private _dialog: MatDialog) {\n\n    this.cardForm = this.fb.group({\n      img: [null],\n      title: ['']\n    })\n  }\n\n  ngOnInit(): void { }\n\n  imagePreview(e: any) {\n    const file = (e.target as HTMLInputElement).files[0];\n\n    this.cardForm.patchValue({\n      img: file\n    });\n\n    this.cardForm.get('img').updateValueAndValidity()\n\n    const reader = new FileReader();\n    reader.onload = () => {\n      this.filePath = reader.result as string;\n      console.log(this.filePath);\n    }\n    reader.readAsDataURL(file)\n  }\n\n  submit() {\n\n\n    this.storybookcard = {\n      card: {\n        id: '0',\n        title: this.cardForm.get('title').value,\n        altImageSrc: this.cardForm.get('title').value,\n        type: \"medium-card\"\n      },\n      actionbar: {\n        position: 'center',\n        rounded: false,\n        type: 'cart'\n      }\n    }\n\n    console.log(this.storybookcard);\n\n    let dialogRef = this._dialog.open(StorybookCardComponent, {\n      data: {\n        set: true,\n        storybookcard: this.storybookcard,\n        file: this.cardForm.get('img').value\n      },\n      maxWidth: '600px',\n    });\n  }\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { FormBuilder, FormGroup, Validators } from \"@angular/forms\";\nimport { MatDialog } from '@angular/material/dialog';\nimport { StorybookCard } from '../models/models';\nimport { StorybookCardComponent } from '../component/storybook-card/storybook-card.component';\n\n\n@Component({\n  selector: 'app-card-form',\n  templateUrl: './card-form.component.html',\n  styleUrls: ['./card-form.component.scss']\n})\n\nexport class CardFormComponent implements OnInit {\n\n  filePath: string;\n  cardForm: FormGroup;\n\n  storybookcard: StorybookCard;\n  submitted = false;\n\n  constructor(\n    public fb: FormBuilder,\n    private _dialog: MatDialog) {\n\n    this.cardForm = this.fb.group({\n      img: [null],\n      title: ['', [Validators.required]]\n    })\n  }\n\n  ngOnInit(): void { }\n\n  public get cardFormControl() { return this.cardForm.controls; }\n\n  imagePreview(e: any) {\n    const file = (e.target as HTMLInputElement).files[0];\n\n    this.cardForm.patchValue({\n      img: file\n    });\n\n    this.cardForm.get('img').updateValueAndValidity()\n\n    const reader = new FileReader();\n    reader.onload = () => {\n      this.filePath = reader.result as string;\n      console.log(this.filePath);\n    }\n    reader.readAsDataURL(file)\n  }\n\n  submit() {\n\n    if (this.cardForm.invalid) {\n      this.submitted = false;\n      return\n    }\n\n    this.storybookcard = {\n      card: {\n        id: '0',\n        title: this.cardForm.get('title').value,\n        altImageSrc: this.cardForm.get('title').value,\n        type: \"medium-card\"\n      },\n      actionbar: {\n        position: 'center',\n        rounded: false,\n        type: 'cart'\n      }\n    }\n\n    console.log(this.storybookcard);\n\n    let dialogRef = this._dialog.open(StorybookCardComponent, {\n      data: {\n        set: true,\n        storybookcard: this.storybookcard,\n        file: this.cardForm.get('img').value\n      },\n      maxWidth: '600px',\n    });\n    this.submitted = true;\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".card-img-preview {\n\n    width: 400px;\n    height: 300px;\n\n}\n\nmat-card{\n    width: 350px;\n    height: 400px;\n    display: block;\n    margin-left:auto;\n    margin-right:auto; \n}\n\n",
+                    "data": ".card-img-preview {\n\n    width: 400px;\n    height: 300px;\n\n}\n\n.error-text {\n    margin-top: 5px;\n    color: red;\n}\n\nmat-card{\n    width: 350px;\n    height: 400px;\n    display: block;\n    margin-left:auto;\n    margin-right:auto; \n}\n\n",
                     "styleUrl": "./card-form.component.scss"
                 }
             ],
@@ -602,7 +612,7 @@
                         "deprecationMessage": ""
                     }
                 ],
-                "line": 19,
+                "line": 20,
                 "jsdoctags": [
                     {
                         "name": "fb",
@@ -627,7 +637,18 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<form [formGroup]=\"cardForm\" (ngSubmit)=\"submit()\">\n\n  <div class=\"row mt-4\">\n    <div class=\"col-6\">\n      <reactive-form-input [input_id]=\"title\" [type]=\"text\" label=\"Title\" placeholder=\"My card\"\n        [control]=\"cardForm.get('title')\">\n      </reactive-form-input>\n    </div>\n  </div>\n  <div class=\"row mt-5\">\n    <div class=\"col-md-12\">\n      <label>Select card image:</label>\n    </div>\n    <div class=\"col-md-12 mt-2\">\n      <input type=\"file\" accept=\"image/*\" (change)=\"imagePreview($event)\" />\n    </div>\n  </div>\n  <div class=\"mt-4\" *ngIf=\"filePath && filePath !== ''\">\n    <img class=\"card-img-preview\" [src]=\"filePath\" [alt]=\"cardForm.value.title\">\n  </div>\n  <button class=\"mt-3\" type=\"submit\">Upload</button>\n</form>"
+            "accessors": {
+                "cardFormControl": {
+                    "name": "cardFormControl",
+                    "getSignature": {
+                        "name": "cardFormControl",
+                        "type": "",
+                        "returnType": "",
+                        "line": 34
+                    }
+                }
+            },
+            "templateData": "<form [formGroup]=\"cardForm\" (ngSubmit)=\"submit()\">\n\n  <div class=\"row mt-4\">\n    <div class=\"col-6\">\n      <reactive-form-input input_id=\"title\" type=\"text\" label=\"Title\" placeholder=\"My card\"\n        [control]=\"cardForm.get('title')\" [validity]=\" !cardFormControl.title.pristine ? cardFormControl.title.valid : null\">\n      </reactive-form-input>\n      <div class=\"mt-2\" *ngIf=\"cardFormControl.title?.errors?.required && !cardFormControl.title.pristine\" class=\"error-text\">La password è richiesta</div>\n    </div>\n  </div>\n  <div class=\"row mt-5\">\n    <div class=\"col-md-12\">\n      <label>Select card image:</label>\n    </div>\n    <div class=\"col-md-12 mt-2\">\n      <input type=\"file\" accept=\"image/*\" (change)=\"imagePreview($event)\" />\n    </div>\n  </div>\n  <div class=\"mt-4\" *ngIf=\"filePath && filePath !== ''\">\n    <img class=\"card-img-preview\" [src]=\"filePath\" [alt]=\"cardForm.value.title\">\n  </div>\n  <button class=\"mt-3\" type=\"submit\">Upload</button>\n</form>"
         },
         {
             "name": "CardPageComponent",
@@ -883,7 +904,7 @@
         },
         {
             "name": "ReactiveFormInputComponent",
-            "id": "component-ReactiveFormInputComponent-26e2186230b5e3f8a88cfa6e70f28977",
+            "id": "component-ReactiveFormInputComponent-0c93648acc8f74055a995052fd15524e",
             "file": "src/app/component/form/reactive-form-input/reactive-form-input.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -904,7 +925,7 @@
                     "name": "control",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 19,
+                    "line": 21,
                     "type": "FormControl"
                 },
                 {
@@ -934,6 +955,14 @@
                     "deprecationMessage": "",
                     "line": 13,
                     "type": "string"
+                },
+                {
+                    "name": "validity",
+                    "defaultValue": "undefined",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 19,
+                    "type": "any"
                 }
             ],
             "outputsClass": [],
@@ -945,7 +974,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 22,
+                    "line": 24,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -957,11 +986,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { FormControl } from '@angular/forms';\n\n@Component({\n  selector: 'reactive-form-input',\n  templateUrl: './reactive-form-input.component.html',\n  styleUrls: ['./reactive-form-input.component.scss']\n})\nexport class ReactiveFormInputComponent implements OnInit {\n\n  @Input() input_id : string;\n  \n  @Input() type : string;\n\n  @Input() label : string;\n\n  @Input() placeholder? : string;\n\n  @Input () control?: FormControl;\n  constructor() { }\n\n  ngOnInit(): void {\n\n  }\n\n}\n",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { FormControl } from '@angular/forms';\n\n@Component({\n  selector: 'reactive-form-input',\n  templateUrl: './reactive-form-input.component.html',\n  styleUrls: ['./reactive-form-input.component.scss']\n})\nexport class ReactiveFormInputComponent implements OnInit {\n\n  @Input() input_id: string;\n\n  @Input() type: string;\n\n  @Input() label: string;\n\n  @Input() placeholder?: string;\n\n  @Input() validity: any = undefined;\n\n  @Input() control?: FormControl;\n  constructor() { }\n\n  ngOnInit(): void {\n\n  }\n\n  public get classes(){\n\n    let mode = \"untouched-input\";\n    if (this.validity != undefined) {\n      mode = this.validity ? 'valid-input' : 'invalid-input';\n    }\n    return [mode];\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".input-container {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n\n    input {\n      border-radius: 15px;\n      padding: 5px 10px;\n      margin-top: 5px;\n    }\n}\n/* Chrome, Safari, Edge, Opera */\ninput::-webkit-outer-spin-button,\ninput::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0;\n}\n\n/* Firefox */\ninput[type=number] {\n  -moz-appearance: textfield;\n}\n\n.submit-btn {\n  background-color: rgb(111, 220, 99);\n  border-radius: 1.1rem;\n  padding: 5px 3px;\n  margin-top: 1.2rem;\n  font-weight: bold;\n}",
+                    "data": ".input-container {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n\n    input {\n      border-radius: 15px;\n      padding: 5px 10px;\n      margin-top: 5px;\n    }\n}\n\n.valid-input{\n\n  border: 2px solid green;\n\n}\n\n.invalid-input{\n\n  border: 2px solid red;\n\n}\n/* Chrome, Safari, Edge, Opera */\ninput::-webkit-outer-spin-button,\ninput::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0;\n}\n\n/* Firefox */\ninput[type=number] {\n  -moz-appearance: textfield;\n}\n\n.submit-btn {\n  background-color: rgb(111, 220, 99);\n  border-radius: 1.1rem;\n  padding: 5px 3px;\n  margin-top: 1.2rem;\n  font-weight: bold;\n}",
                     "styleUrl": "./reactive-form-input.component.scss"
                 }
             ],
@@ -972,16 +1001,27 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 19
+                "line": 21
             },
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"input-container\">\n    <label for=\"{{input_id}}\">{{label}}: </label>\n    <input id=\"{{input_id}}\" type=\"{{type}}\" [formControl]=\"control\" placeholder=\"{{placeholder}}\">\n</div>"
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "",
+                        "returnType": "",
+                        "line": 28
+                    }
+                }
+            },
+            "templateData": "<div class=\"input-container\">\n    <label for=\"{{input_id}}\">{{label}}: </label>\n    <input  class=\"{{classes}}\" id=\"{{input_id}}\" type=\"{{type}}\" [formControl]=\"control\" placeholder=\"{{placeholder}}\">\n</div>"
         },
         {
             "name": "StorybookCardComponent",
-            "id": "component-StorybookCardComponent-adb2a18142f2c2db8cc396c1450af2ed",
+            "id": "component-StorybookCardComponent-4c4505d473308a56849f6431d35ec136",
             "file": "src/app/component/storybook-card/storybook-card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1058,7 +1098,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 41,
+                    "line": 39,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -1096,7 +1136,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 35,
+                    "line": 34,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -1119,7 +1159,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Inject, Input, OnInit, Output } from '@angular/core';\nimport { MAT_DIALOG_DATA } from '@angular/material/dialog';\n\nimport { Actionbar, StorybookCard } from '../../models/models'\n@Component({\n  selector: 'app-storybook-card',\n  templateUrl: './storybook-card.component.html',\n  styleUrls: ['./storybook-card.component.scss']\n})\nexport class StorybookCardComponent implements OnInit {\n\n  //child input\n\n  @Input() storybookcard: StorybookCard;\n\n  @Output()\n  onClickAction = new EventEmitter<Event>();\n\n  @Output()\n  openCardClick = new EventEmitter<Event>();\n\n  constructor(\n    @Inject(MAT_DIALOG_DATA) public data: any) {\n\n  }\n\n  ngOnInit(): void {\n    if (this.data.set) {\n      console.log(this.data);\n      this.imagePreview(this.data.file);\n      this.storybookcard = this.data.storybookcard;\n    }\n  }\n\n  openCard(id: any) {\n    console.log('Hello there... General Kenoby');\n    this.openCardClick.emit(<any>'Hello there... General Kenoby' + id);\n  }\n\n\n  imagePreview(e: any) {\n    const file = e;\n    const reader = new FileReader();\n    reader.onload = () => {\n      this.storybookcard.card.imageSrc = reader.result as string;\n    }\n    reader.readAsDataURL(file)\n  }\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Inject, Input, OnInit, Output } from '@angular/core';\nimport { MAT_DIALOG_DATA } from '@angular/material/dialog';\n\nimport { Actionbar, StorybookCard } from '../../models/models'\n@Component({\n  selector: 'app-storybook-card',\n  templateUrl: './storybook-card.component.html',\n  styleUrls: ['./storybook-card.component.scss']\n})\nexport class StorybookCardComponent implements OnInit {\n\n  //child input\n\n  @Input() storybookcard: StorybookCard;\n\n  @Output()\n  onClickAction = new EventEmitter<Event>();\n\n  @Output()\n  openCardClick = new EventEmitter<Event>();\n\n  constructor(\n    @Inject(MAT_DIALOG_DATA) public data: any) {\n\n  }\n\n  ngOnInit(): void {\n    if (this.data.set) {\n      this.imagePreview(this.data.file);\n      this.storybookcard = this.data.storybookcard;\n    }\n  }\n\n  openCard(id: any) {\n    this.openCardClick.emit(<any>'Hello there... General Kenoby' + id);\n  }\n\n\n  imagePreview(e: any) {\n    const file = e;\n    const reader = new FileReader();\n    reader.onload = () => {\n      this.storybookcard.card.imageSrc = reader.result as string;\n    }\n    reader.readAsDataURL(file)\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1769,6 +1809,16 @@
                 "defaultValue": "{\n  production: false\n}"
             },
             {
+                "name": "InvalidInput",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/reactiveFormInput.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "Large",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1863,26 +1913,6 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/storybookCard.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "NumericInput",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/reactiveFormInput.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "PasswordInput",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/reactiveFormInput.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -2016,6 +2046,16 @@
                 "deprecationMessage": "",
                 "type": "Story<TaskListComponent>",
                 "defaultValue": "args => ({\n    props: {\n        ...args,\n        onPinTask: TaskStories.actionsData.onPinTask,\n        onArchiveTask: TaskStories.actionsData.onArchiveTask,\n    },\n})"
+            },
+            {
+                "name": "ValidNumericInput",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/reactiveFormInput.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "WithPinnedTasks",
@@ -2371,17 +2411,7 @@
                     "defaultValue": "Template.bind({})"
                 },
                 {
-                    "name": "NumericInput",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/reactiveFormInput.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "PasswordInput",
+                    "name": "InvalidInput",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "src/stories/reactiveFormInput.stories.ts",
@@ -2399,6 +2429,16 @@
                     "deprecationMessage": "",
                     "type": "Story<ReactiveFormInputComponent>",
                     "defaultValue": "args => ({\n  props: {\n    ...args,\n  }, \n})"
+                },
+                {
+                    "name": "ValidNumericInput",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/reactiveFormInput.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
                 }
             ],
             "src/stories/tasklist.stories.ts": [
@@ -2615,7 +2655,7 @@
                 "linktype": "component",
                 "name": "CardFormComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/9",
+                "coverageCount": "0/10",
                 "status": "low"
             },
             {
@@ -2642,7 +2682,7 @@
                 "linktype": "component",
                 "name": "ReactiveFormInputComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/8",
+                "coverageCount": "0/9",
                 "status": "low"
             },
             {
@@ -2960,17 +3000,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "NumericInput",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/reactiveFormInput.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "PasswordInput",
+                "name": "InvalidInput",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -2981,6 +3011,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/reactiveFormInput.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ValidNumericInput",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

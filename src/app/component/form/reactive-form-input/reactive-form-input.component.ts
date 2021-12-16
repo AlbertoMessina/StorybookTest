@@ -8,19 +8,30 @@ import { FormControl } from '@angular/forms';
 })
 export class ReactiveFormInputComponent implements OnInit {
 
-  @Input() input_id : string;
-  
-  @Input() type : string;
+  @Input() input_id: string;
 
-  @Input() label : string;
+  @Input() type: string;
 
-  @Input() placeholder? : string;
+  @Input() label: string;
 
-  @Input () control?: FormControl;
+  @Input() placeholder?: string;
+
+  @Input() validity: any = undefined;
+
+  @Input() control?: FormControl;
   constructor() { }
 
   ngOnInit(): void {
 
+  }
+
+  public get classes(){
+
+    let mode = "untouched-input";
+    if (this.validity != undefined) {
+      mode = this.validity ? 'valid-input' : 'invalid-input';
+    }
+    return [mode];
   }
 
 }

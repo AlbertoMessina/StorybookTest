@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from "@angular/forms";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { MatDialog } from '@angular/material/dialog';
 import { StorybookCard } from '../models/models';
 import { StorybookCardComponent } from '../component/storybook-card/storybook-card.component';
@@ -17,6 +17,7 @@ export class CardFormComponent implements OnInit {
   cardForm: FormGroup;
 
   storybookcard: StorybookCard;
+  submitted = false;
 
   constructor(
     public fb: FormBuilder,
@@ -24,11 +25,13 @@ export class CardFormComponent implements OnInit {
 
     this.cardForm = this.fb.group({
       img: [null],
-      title: ['']
+      title: ['', [Validators.required]]
     })
   }
 
   ngOnInit(): void { }
+
+  public get cardFormControl() { return this.cardForm.controls; }
 
   imagePreview(e: any) {
     const file = (e.target as HTMLInputElement).files[0];
@@ -49,6 +52,10 @@ export class CardFormComponent implements OnInit {
 
   submit() {
 
+    if (this.cardForm.invalid) {
+      this.submitted = false;
+      return
+    }
 
     this.storybookcard = {
       card: {
@@ -74,5 +81,6 @@ export class CardFormComponent implements OnInit {
       },
       maxWidth: '600px',
     });
+    this.submitted = true;
   }
 }

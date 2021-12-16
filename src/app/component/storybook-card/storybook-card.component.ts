@@ -26,14 +26,12 @@ export class StorybookCardComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.data.set) {
-      console.log(this.data);
       this.imagePreview(this.data.file);
       this.storybookcard = this.data.storybookcard;
     }
   }
 
   openCard(id: any) {
-    console.log('Hello there... General Kenoby');
     this.openCardClick.emit(<any>'Hello there... General Kenoby' + id);
   }
 

@@ -16,6 +16,12 @@ describe('ActionbarComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ActionbarComponent);
     component = fixture.componentInstance;
+    //set actionbar input parameter
+    component.actionbar = {
+      position: 'right',
+      rounded: true,
+      type: 'cart' 
+    }
     fixture.detectChanges();
   });
 

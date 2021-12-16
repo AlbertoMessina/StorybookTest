@@ -32,23 +32,26 @@ Default.args = {
     input_id : "name",
     type : 'text',
     label: 'First name',
-    placeholder: 'Stupid placeholder'
+    placeholder: 'Stupid placeholder',
+    validity: undefined
   };
 
-  export const NumericInput = Template.bind({});
-  NumericInput.args = {
+  export const ValidNumericInput = Template.bind({});
+  ValidNumericInput.args = {
       input_id : "number",
       type : 'number',
       label: 'Numeric Input',
-      placeholder: '12345'
+      placeholder: '12345',
+      validity: true
     };
 
-    export const PasswordInput = Template.bind({});
-    PasswordInput.args = {
+    export const InvalidInput = Template.bind({});
+    InvalidInput.args = {
         input_id : "password",
         type : 'password',
         label: 'Password',
-        placeholder: 'insertPassword'
+        placeholder: 'insertPassword',
+        validity: false
       };
   
   
