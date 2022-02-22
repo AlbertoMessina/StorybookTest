@@ -17,6 +17,8 @@ export class ProfileFormComponent implements OnInit {
     private _dialog: MatDialog
   ) { }
 
+  submitted = false;
+
   ngOnInit(): void {
 
     this.profileForm = this._fb.group({
@@ -32,6 +34,11 @@ export class ProfileFormComponent implements OnInit {
   get profileControls() { return this.profileForm.controls; }
 
   onSubmit() {
+    if(this.profileForm.invalid){
+      this.submitted = false;
+      return;
+    }
+    this.submitted = true;
   }
 
 }

@@ -2,28 +2,49 @@
 <form [formGroup]='profileForm' (ngSubmit)="onSubmit()">
   <div class="row input-row-container">
     <div class="col-md-4">
-      <reactive-form-input [input_id]="name" [type]="text" label="First name" placeholder="Insert first name" [control]="profileForm.get('name')">
+      <reactive-form-input [input_id]="name" [type]="text" label="First name" placeholder="Insert first name"
+        [control]="profileForm.get('name')"
+        [validity]="!profileControls.name.pristine ? profileControls.name.valid : null">
       </reactive-form-input>
+      <div class="error-text" *ngIf="profileControls.name?.errors?.required && !profileControls.name.pristine">Il nome è
+        richiesto</div>
     </div>
     <div class="col-md-4">
       <reactive-form-input [input_id]="surname" [type]="text" label="Second name" placeholder="Insert second name"
+        [validity]="!profileControls.surname.pristine ? profileControls.surname.valid : null"
         [control]="profileForm.get('surname')">
       </reactive-form-input>
+      <div class="error-text" *ngIf="profileControls.surname?.errors?.required && !profileControls.surname.pristine">Il
+        cognome è richiesto</div>
     </div>
   </div>
 
   <div class="row input-row-container">
     <div class="col-md-4">
-      <reactive-form-input [input_id]="city" [type]="text" label="City" placeholder="City" [control]="profileForm.get('city')"> 
+      <reactive-form-input [input_id]="city" [type]="text" label="City" placeholder="City"
+        [validity]="!profileControls.city.pristine ? profileControls.city.valid : null"
+        [control]="profileForm.get('city')">
       </reactive-form-input>
+      <div class="error-text" *ngIf="profileControls.city?.errors?.required && !profileControls.city.pristine">
+        La città è richiesta</div>
     </div>
     <div class="col-md-4">
-      <reactive-form-input [input_id]="state" [type]="text" label="State" placeholder="State" [control]="profileForm.get('state')">
+      <reactive-form-input [input_id]="state" [type]="text" label="State" placeholder="State"
+        [validity]="!profileControls.city.pristine ? profileControls.state.valid : null"
+        [control]="profileForm.get('state')">
       </reactive-form-input>
+      <div class="error-text" *ngIf="profileControls.state?.errors?.required && !profileControls.state.pristine">
+        Inserisci lo stato di appartenenza</div>
     </div>
     <div class="col-md-4">
-      <reactive-form-input [input_id]="zip" [type]="text" label="zip" placeholder="Zip code" [control]="profileForm.get('zip')">
+      <reactive-form-input [input_id]="zip" [type]="text" label="zip" placeholder="Zip code"
+        [validity]="!profileControls.zip.pristine ? profileControls.zip.valid : null"
+        [control]="profileForm.get('zip')">
       </reactive-form-input>
+      <div *ngIf="profileControls.zip?.errors && !profileControls.zip.pristine">
+        <div class="error-text" *ngIf="profileControls.zip?.errors?.required">
+          Inserire un zip valido</div>
+      </div>
     </div>
   </div>
   <button [disabled]="!profileForm.valid" class="custom-btn submit" type="submit">BottoneDiSalva</button>

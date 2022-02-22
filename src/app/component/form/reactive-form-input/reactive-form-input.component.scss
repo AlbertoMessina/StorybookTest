@@ -11,27 +11,11 @@
 }
 
 .valid-input{
-
   border: 2px solid green;
-
 }
 
 .invalid-input{
-
   border: 2px solid red;
-  border: none !important;
-
-}
-
-input:required {
-
-  box-shadow: none !important;
-  border: none !important;
-
-}
-
-input:invalid {
-  box-shadow: none !important;
 }
 
 .submit-btn {

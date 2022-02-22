@@ -1,11 +1,12 @@
 <form [formGroup]="cardForm" (ngSubmit)="submit()">
-
   <div class="row mt-4">
     <div class="col-6">
       <reactive-form-input input_id="title" type="text" label="Title" placeholder="My card"
-        [control]="cardForm.get('title')" [validity]=" !cardFormControl.title.pristine ? cardFormControl.title.valid : null">
+        [control]="cardForm.get('title')"
+        [validity]=" !cardFormControl.title.pristine ? cardFormControl.title.valid : null">
       </reactive-form-input>
-      <div class="mt-2" *ngIf="cardFormControl.title?.errors?.required && !cardFormControl.title.pristine" class="error-text">La password è richiesta</div>
+      <div class="mt-2" *ngIf="cardFormControl.title?.errors?.required && !cardFormControl.title.pristine"
+        class="error-text">La password è richiesta</div>
     </div>
   </div>
   <div class="row mt-5">

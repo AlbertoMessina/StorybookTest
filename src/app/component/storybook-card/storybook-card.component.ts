@@ -35,7 +35,6 @@ export class StorybookCardComponent implements OnInit {
     this.openCardClick.emit(<any>'Hello there... General Kenoby' + id);
   }
 
-
   imagePreview(e: any) {
     const file = e;
     const reader = new FileReader();
